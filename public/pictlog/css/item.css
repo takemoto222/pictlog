@@ -1,0 +1,219 @@
+/*全体*/
+.inner-box {
+  width: 960px;
+  background: #fff;
+  margin: auto;
+}
+
+/*ヘッダー部分*/
+
+/*ヘッダー全体*/
+.header {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid #b3afaf;
+}
+/*タイトル*/
+.header_ttl {
+}
+
+.header_ttl_h1 {
+  color: #000;
+  font-family: "Estonia", cursive;
+  font-size: 35px;
+}
+/*ナビ*/
+.nav {
+  display: flex;
+}
+
+/*名前領域*/
+.nav_list {
+  display: flex;
+  margin-right: 50px;
+  margin-top: 7%;
+}
+
+.nav_item {
+  /*アイコンそれぞれの箱*/
+  list-style: none;
+  margin-left: 40px;
+}
+
+.nav_item_a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+/*ヘッダーのアイコン*/
+.header_icon_img {
+  width: 25px;
+  height: 25px;
+}
+
+.header_icon_img:hover {
+  opacity: 0.5;
+}
+/*ここまで*/
+
+/*投稿された画像 部分*/
+/*画像横スクロール*/
+.slider {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  padding: 0;
+  margin: 1rem auto;
+  box-sizing: unset;
+  border: 3px solid #696969;
+  border-radius: 6px;
+}
+.slider .slide {
+  width: 800px;
+  height: 600px;
+  padding: 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider .slide img {
+  padding: 0;
+  margin: 0;
+  width: 800px;
+  height: 600px;
+}
+
+.slider .slide ul {
+  width: 1248px;
+  height: 600px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style: none;
+  font-size: 0;
+  position: relative;
+}
+.slider .slide li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  transition: 0.7s cubic-bezier(0.45, 0.06, 0.32, 1);
+}
+
+.slide li:nth-of-type(1) {
+  left: -416px;
+}
+.slide li:nth-of-type(2) {
+  left: 0px;
+}
+.slide li:nth-of-type(3) {
+  left: 416px;
+}
+
+.controller {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.controller .prev-btn {
+  margin-left: 3rem;
+  cursor: pointer;
+  color: #696969;
+}
+.controller .next-btn {
+  margin-right: 3rem;
+  cursor: pointer;
+  color: #696969;
+}
+
+.controller .indicator {
+  display: flex;
+  width: 80px;
+  height: 16px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  background: #696969;
+  border-radius: 10px;
+}
+
+.indicator span {
+  width: 8px;
+  height: 8px;
+  background: whitesmoke;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 4px 0 4px;
+}
+
+#active {
+  background: red;
+}
+
+/*
+.header_item {
+  background: #fff;
+  width: 100%;
+  margin: 5% auto;
+  height: 400px;
+}
+
+.item_image {
+  width: 650px;
+  height: 100%;
+}
+
+.item_img {
+  width: ;
+  height: 100%;
+  padding: 20px 20px;
+}
+*/
+
+/*投稿写真説明*/
+
+/*テキストエリアの箱*/
+.item_discription {
+  width: 800px;
+  margin: 10% auto 0;
+}
+/*テキストエリア本体*/
+.textarea {
+  width: 100%;
+  border: 3px solid #eee;
+  border-radius: 6px;
+}
+
+/*いいね、コメントエリア箱*/
+.message_area {
+  width: 800px;
+}
+/*いいね、コメントアイコン*/
+.icon_area_list {
+  display: flex;
+}
+.icon_area {
+  width: 800px;
+}
+
+.massage_icon_li {
+  width: 25px;
+  height: 25px;
+  list-style: none;
+  margin-left: 5%;
+}
+
+.massage_icon {
+  width: 25px;
+  height: 25px;
+}

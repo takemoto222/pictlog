@@ -1,0 +1,152 @@
+.inner_box_wrapper {
+    width: 600px;
+    margin: 5% auto;
+}
+
+/*ヘッダー部分*/
+.header_list {
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+}
+
+.h1_ttl {
+    margin-left: 45%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #696969;
+}
+
+.nav_list {
+    display: flex;
+}
+.li {
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.nav_list_a {
+}
+
+.img_icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/*編集画面*/
+/*画像、名前*/
+
+.my_img_name_box {
+    width: 100%;
+    display: flex;
+    margin: 40px 20px;
+}
+
+.my_img_edit {
+    width: 30%;
+}
+
+.my_img_box {
+    width: 100px;
+    height: 100px;
+    background: #eee;
+    border: 1px solid #eee;
+    border-radius: 50%;
+}
+
+.my_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+/*プロフィール編集*/
+.my_name_edit {
+    width: 70%;
+}
+
+.my_name_edit {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 6%;
+    margin-right: 20px;
+}
+
+.my_name_edit input[type="text"] {
+    font: 15px/24px sans-selif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.pro_textarea_box {
+    width: 100%;
+}
+
+.profile_area {
+    width: 100%;
+}
+
+/*メール　住所　編集ホーム*/
+
+.edit_text {
+    position: relative;
+    width: 90%;
+    margin: 40px 3%;
+}
+
+.edit_text input[type="text"] {
+    font: 15px/24px sans-selif;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.3em;
+    transition: 0.3s;
+    letter-spacing: 1px;
+    color: #000;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+}
+
+.label input[type="text"]:focus {
+    border: 5px solid #da3c41;
+    outline: none;
+}
+
+/*保存　送信ボタン*/
+.btn {
+    text-decoration: none;
+    border: none;
+    text-align: center;
+}
+
+.send_button_a {
+    background: #eee;
+    padding: 0.5em 4em;
+    color: #000;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.send_button_a:hover {
+    color: #fff;
+    background: #696969;
+}
+
+.text_box {
+    width: 500px;
+    display: flex;
+}

@@ -1,0 +1,249 @@
+.inner-box {
+  width: 960px;
+  background: #fff;
+  margin: auto;
+}
+
+/*ヘッダー全体*/
+.header {
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid #b3afaf;
+}
+/*タイトル*/
+.header_ttl {
+}
+
+.header_ttl_h1 {
+  color: #000;
+  font-family: "Estonia", cursive;
+  font-size: 35px;
+}
+/*ナビ*/
+.nav {
+  display: flex;
+}
+
+/*名前領域*/
+.nav_list {
+  display: flex;
+  margin-right: 50px;
+  margin-top: 7%;
+}
+
+.nav_item {
+  /*アイコンそれぞれの箱*/
+  list-style: none;
+  margin-left: 40px;
+}
+
+.nav_item_a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+/*ヘッダーのアイコン*/
+.header_icon_img {
+  width: 25px;
+  height: 25px;
+}
+
+.header_icon_img:hover {
+  opacity: 0.5;
+}
+/*ヘッダーここまで*/
+
+/*トップ全体の箱*/
+.top {
+  height: 250px;
+  width: 960px;
+  background: #fff;
+}
+/*トップ中身の箱*/
+.top_inner {
+  width: 100%;
+  display: flex;
+}
+/*左*/
+.topmyimg_area {
+  width: 30%;
+  height: 250px;
+}
+
+.topimg_box {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 35px 35px;
+}
+
+.top_my_img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+/*右*/ /*名前、投稿数、フォロー、フォロワー*/
+.toptext_area {
+  width: 70%;
+  height: 250px;
+}
+/*フォローフォロワー*/
+.follow_form {
+  margin-top: 30px;
+}
+
+.follow_number {
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 50px;
+  /*navフォント*/
+  font-family: "Estonia", cursive;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*名前、自己紹介*/
+.name_area {
+  border: none;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.form_area {
+  margin-top: 25px;
+  margin-left: 50px;
+}
+/*自己紹介*/
+.textarea {
+  margin-top: 20px;
+  border: 1px solid #eee;
+}
+
+/**/
+/**/
+/*メイン  タブ*/
+.tab {
+  width: 960px;
+}
+.tab-menu {
+  display: flex;
+}
+/*タブのブロックの形*/
+.tab-menu__item {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+  width: 40px;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-right: 2px solid rgb(106, 100, 100);
+}
+.tab-menu__item:not(:first-child) {
+  border-left: none;
+}
+/*タブブロックの中の色*/
+.tab-menu__item.active {
+  background: #eee;
+  color: white;
+}
+/*タブ内のアイコン*/
+.icon_img {
+  width: 30px;
+  height: 30px;
+}
+
+.tab-menu__item:hover {
+  background: #eee;
+}
+/*タブの中、コンテンツ全体*/
+.tab-content {
+  border-top: 1px solid #eee;
+  border-radius: 5px;
+}
+.tab-content__item {
+  display: none;
+  font-size: 40px;
+}
+.tab-content__item.show {
+  display: block;
+}
+/*タブ枠ここまで*/
+/*コンテンツ中身１*/
+.content1_inenr {
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content1_box {
+  margin: 10px 25px;
+}
+
+.content1_box {
+  width: 270px;
+  height: 270px;
+}
+
+.content1_img_area {
+  width: 270px;
+  height: 240px;
+  border-radius: 5px;
+}
+
+.content1_img {
+  width: 270px;
+  height: 240px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.content1_img:hover {
+  opacity: 0.5;
+}
+
+/*コンテンツ１　投稿した　リストタイトル*/
+.my_postlist {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 18%;
+}
+/*コンテンツ２　いいねしたリストタイトル*/
+.my_likelist {
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+/*コンテンツ３　設定タイトル*/
+.my_seting {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 82%;
+}
+
+/*コンテンツ中身２*/
+/*コンテンツ中身３*/
+/*スクロール*/
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  background-color: #999;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}
