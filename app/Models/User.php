@@ -14,7 +14,7 @@ class User extends Model
 
     public function getDetail()
     {
-        $txt = 'ID:' . $this->id . ' ' . $this->name . '(' . $this->age .  '才' . ') ' . $this->profile . $this->image;
+        $txt = 'ID:' . $this->id . ' ' . $this->name . '(' . $this->age .  '才' . ') ' . $this->profile . $this->image . $this->email;
         return $txt;
     }
 }
