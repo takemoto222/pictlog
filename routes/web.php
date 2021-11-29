@@ -5,7 +5,6 @@ use App\Http\Controllers\UserController;
 
 
 
-//練習
 //Route::get('/', [TestController::class, 'index']);
 
 
