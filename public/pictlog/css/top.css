@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+}
+
+/*ヘッダー全体*/
+.header {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  border-bottom: 1px solid #b3afaf;
+}
+/*タイトル*/
+.header_ttl {
+  margin-left: 15%;
+}
+
+.header_ttl_h1 {
+  color: #000;
+  font-family: "Estonia", cursive;
+  font-size: 35px;
+}
+
+/*検索*/
+.seach_space {
+  border-radius: 2px;
+  height: 25px;
+  width: 300px;
+  margin-left: 50px;
+  margin-top: 6%;
+  border: 3px solid #eee;
+}
+
+.seach_button {
+  height: 25px;
+  width: 60px;
+  padding: 2px 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #696969;
+  border: 1px solid #eee;
+  border-radius: 2px;
+}
+
+/*ナビ*/
+.nav {
+  display: flex;
+  margin-right: 15%;
+}
+
+/*名前領域*/
+.nav_list {
+  display: flex;
+  margin-right: 50px;
+  margin-top: 7%;
+}
+
+.nav_item {
+  /*アイコンそれぞれの箱*/
+  list-style: none;
+  margin-left: 40px;
+}
+
+.nav_item_a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  font-size: 18px;
+}
+/*ヘッダーのアイコン*/
+.header_icon_img {
+  width: 25px;
+  height: 25px;
+}
+
+.header_icon_img:hover {
+  opacity: 0.5;
+}
+
+/*インナーボックス*/
+.inner-box {
+  width: 960px;
+  margin: auto;
+}
+
+/**/
+/*ここからメイン*/
+/*main インナー*/
+.main_inner {
+  width: 610px;
+  margin: auto;
+  margin-top: 15%;
+}
+
+/*コンテンツ　箱*/
+.content_box {
+  height: 800px;
+  width: 610px;
+  border: 1px solid #aaa8a8;
+  border-radius: 5px;
+  margin-top: 7%;
+}
+/*メイン画像*/
+.content_main_imgarea {
+  height: 600px;
+  width: 610px;
+}
+
+.main_img {
+  height: 600px;
+  width: 610px;
+}
+
+/*ユーザー情報表示部分*/
+.content_name_box {
+  width: 610px;
+  display: flex;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+/*ユーザーイメージ画像*/
+.name_img_box {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+.name_img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+/*ユーザー名前部分*/
+.name_box {
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+.name_area {
+  border: none;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px 20px 0px;
+}
+
+/*メインコンテンツ　フォーム*/
+.textarea {
+  width: 610px;
+  height: 140px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 10px 12px;
+}
+
+/*メインコンテンツここまで*/
+
+/*スクロール*/
+.scroll-top {
+  position: fixed;
+  right: 2%;
+  bottom: 5%;
+  background-color: #999;
+  opacity: 0.8;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+}

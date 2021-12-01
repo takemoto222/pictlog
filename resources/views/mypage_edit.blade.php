@@ -1,6 +1,3 @@
-edit.blade
-
-
 <!DOCTYPE thml>
 
 <thml>
@@ -9,6 +6,11 @@ edit.blade
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset('pictlog/css/mypage.edit.css')  }}">
     <link rel="stylesheet" href="{{ ('css/reset.css') }}">
+    <!--タイトルフォント-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Estonia&display=swap" rel="stylesheet">
+
     <title>マイページ編集</title>
   </head>
 
@@ -22,10 +24,10 @@ edit.blade
         <!--ナビバー-->
         <nav class="nav">
           <ul class="nav_list">
-            <li class="nav_item"><a href="top.html" class="nav_item_a"><img src="img/iconhome2.png" class="header_icon_img"></a></li>
-            <li class="nav_item"><a href="index.html" class="nav_item_a"><img src="img/icon_mypage.png" class="header_icon_img"></a></li>
-            <li class="nav_item"><a href="#" class="nav_item_a"><img src="img/seting.png" class="header_icon_img"> </a></li>
-            <li class="nav_item"><a href="contact.html" class="nav_item_a"><img src="img/iconmall3.png" class="header_icon_img"></a></li>
+            <li class="nav_item"><a href="top.html" class="nav_item_a"><img src="{{ asset('pictlog/img/iconhome2.png') }}" class="header_icon_img"></a></li>
+            <li class="nav_item"><a href="index.html" class="nav_item_a"><img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img"></a></li>
+            <li class="nav_item"><a href="#" class="nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
+            <li class="nav_item"><a href="contact.html" class="nav_item_a"><img src="{{ asset('pictlog/img/iconmall3.png') }}" class="header_icon_img"></a></li>
           </ul>
         </nav>
         <!--ナビバーここまで-->
@@ -36,7 +38,7 @@ edit.blade
         <!---->
         <div class="my_img_edit">
           <div class="my_img_box">
-            <img src="#" alt="イメージ" class="my_img">
+            <img src="{{ asset('') }}" alt="イメージ" class="my_img">
           </div>
         </div>
 
