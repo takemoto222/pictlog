@@ -6,6 +6,8 @@ use App\Http\Controllers\TopController;
 
 
 
+//トップページ
+Route::get('/top', [TopController::class, 'top']);
 //練習
 //Route::get('/', [TestController::class, 'index']);
 
@@ -19,7 +21,4 @@ Route::get('/update/{id}', [UserController::class, 'update']);
 //マイページ編集
 Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit']);
 Route::post('/edit_update/{id}', [UserController::class, 'update']);
-
-
-//トップページ
-Route::get('/top', [TopController::class, 'top']);
+//画像

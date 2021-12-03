@@ -35,12 +35,21 @@
       <!--編集画面　画像　名前-->
       <!--この内容をmypage.blade.phpに反映させたい-->
       <div class="my_img_name_box">
-        <!---->
-        <div class="my_img_edit">
-          <div class="my_img_box">
-            <img src="{{ asset('') }}" alt="イメージ" class="my_img">
+
+        <!--
+          画像をアップロードしたい
+        -->
+        <form action="{{ route('admin.members.store') }}" method="POST" enctype="multipart/form-data">
+          @csrf
+          <div class="my_img_edit">
+            <div class="my_img_box">
+              <input type="file" name="profile_img" class="my_img">
+            </div>
           </div>
-        </div>
+        </form>
+        <!--
+          画像をアップロードしたいここまで
+        -->
 
 
 
@@ -53,7 +62,7 @@
         <!--更新させたい-->
         <!--更新させたい-->
         <!--更新させたい-->
-        <div class="my_name_age">
+        <div class=" my_name_age">
           <form action="/edit_update/{id}" method="post">
             @csrf
             <!--どのユーザーが更新するのかid特定-->

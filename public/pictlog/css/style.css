@@ -34,13 +34,13 @@
 .nav_list {
     display: flex;
 
-    margin-top: 7%;
+    margin-top: 12%;
 }
 
 .nav_item {
     /*アイコンそれぞれの箱*/
     list-style: none;
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .nav_item_a {
@@ -189,12 +189,9 @@
 }
 
 .content1_box {
-    margin: 10px 25px;
-}
-
-.content1_box {
     width: 270px;
     height: 270px;
+    margin: 10px 25px;
 }
 
 .content1_img_area {
@@ -235,19 +232,3 @@
 
 /*コンテンツ中身２*/
 /*コンテンツ中身３*/
-/*スクロール*/
-.scroll-top {
-    position: fixed;
-    right: 2%;
-    bottom: 5%;
-    background-color: #999;
-    opacity: 0.8;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-}

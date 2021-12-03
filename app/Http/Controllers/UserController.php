@@ -32,11 +32,6 @@ class UserController extends Controller
 
 
     //後
-    //新規会員登録
-    public function sineup()
-    {
-        return view('sineup');
-    }
     //マイページ編集
     public function mypage_edit($id)
     {
@@ -49,4 +44,6 @@ class UserController extends Controller
         User::where('id', $request->id)->update($form); //'id', $request->idで更新するIDを特定、update($form)でnameを更新
         return redirect("/{$request->id}");
     }
+
+    /*画像関係*/
 }

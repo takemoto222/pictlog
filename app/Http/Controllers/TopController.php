@@ -7,8 +7,6 @@ use App\Models\User;
 
 class TopController extends Controller
 {
-
-    //トップ画像
     public function top()
     {
         return view('top');
