@@ -18,13 +18,13 @@ class UserController extends Controller
     }
     public function create(Request $request)
     {
-        $form = $request->all('name', 'age', 'profile');
+        $form = $request->all('name', 'age', 'profile', 'image');
         User::create($form);
         return redirect('/');
     }
     public function update(Request $request)
     {
-        $form = $request->all('name', 'age', 'profile'); //nameをデータベースから全て取り出す formに渡す
+        $form = $request->all('name', 'age', 'profile', 'image'); //nameをデータベースから全て取り出す formに渡す
         User::where('id', $request->id)->update($form); //'id', $request->idで更新するIDを特定、update($form)でnameを更新
         return redirect("/{$request->id}");
     }
@@ -40,7 +40,7 @@ class UserController extends Controller
     }
     public function edit_update(Request $request)
     {
-        $form = $request->all('name', 'age', 'profile'); //nameをデータベースから全て取り出す formに渡す
+        $form = $request->all('name', 'age', 'profile', 'image'); //nameをデータベースから全て取り出す formに渡す
         User::where('id', $request->id)->update($form); //'id', $request->idで更新するIDを特定、update($form)でnameを更新
         return redirect("/{$request->id}");
     }
