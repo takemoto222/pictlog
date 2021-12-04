@@ -37,6 +37,7 @@
               <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="my_img">
               @endisset
             </div>
+            <input type="file" name="profile_img">
           </div>
           <!--画像ここまで-->
           <!--以下名前とプロフィール更新-->

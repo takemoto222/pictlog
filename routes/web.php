@@ -19,6 +19,6 @@ Route::get('/update/{id}', [UserController::class, 'update']);
 
 //後
 //マイページ編集
-Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit']);
+Route::get('/mypage_edit/{{ $item->id }}', [UserController::class, 'mypage_edit']);
 Route::post('/edit_update/{id}', [UserController::class, 'update']);
 //画像
