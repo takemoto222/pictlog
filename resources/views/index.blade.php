@@ -36,15 +36,9 @@
       <!--トップビュー-->
       <div class="top">
         <div class="top_inner">
-          <div class="top_my_img_area">
-            <div class="topimg_box">
-              <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="top_my_img">
-            </div>
-          </div>
-          <!---->
-          <!--テスト-->
 
-          <!--テストここまで　-->
+
+
 
           <!--名前、プロフィール-->
 
@@ -54,11 +48,19 @@
           <!--更新させたい-->
           <form action="/update/{id}" method="get" class="form_area">
             @csrf
-            @isset($item->image)
-            <img src="/storage/{{$item->image}}" class="top_my_img">
-            @else
-            <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="top_my_img">
-            @endisset
+          <!--画像-->
+          <div class="top_my_img_area">
+            <div class="topimg_box">
+              @isset($item->image)
+              <img src="/storage/{{$item->image}}" class="top_my_img">
+              @else
+              <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="top_my_img">
+              @endisset
+            </div>
+          </div>
+          <!--画像ここまで-->
+          <!---->
+
             <!--どのユーザーが更新するのかid特定-->
             <input type="hidden" name="id" value="{{$item->id}}">
             <input type="text" name="name" value="{{$item->name}}" class="name_area">
