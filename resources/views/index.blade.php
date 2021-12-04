@@ -54,6 +54,11 @@
           <!--更新させたい-->
           <form action="/update/{id}" method="get" class="form_area">
             @csrf
+            @isset($item->image)
+            <img src="/storage/{{$item->image}}" class="top_my_img">
+            @else
+            <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="top_my_img">
+            @endisset
             <!--どのユーザーが更新するのかid特定-->
             <input type="hidden" name="id" value="{{$item->id}}">
             <input type="text" name="name" value="{{$item->name}}" class="name_area">

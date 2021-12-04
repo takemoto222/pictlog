@@ -46,4 +46,17 @@ class UserController extends Controller
     }
 
     /*画像関係*/
+    public function image(Request $request, User $user)
+    {
+
+        // バリデーション省略
+        $originalImg = $request->profile_img;
+
+        if ($originalImg->isValid()) {
+            $filePath = $originalImg->store('public');
+            $form->image = str_replace('public/', '', $filePath);
+            $form->save();
+            return redirect("/user/{$user->id}")->with('user', $user);
+        }
+    }
 }
