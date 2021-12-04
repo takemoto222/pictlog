@@ -26,7 +26,7 @@
         <!--更新内容記入ここから-->
 
         <!--更新させたい-->
-        <form action="/edit_update/{id}" method="post">
+        <form action="/edit_update/{{ $item->id }}" method="post">
           @csrf
           <!--画像-->
           <div class="my_img_edit">
@@ -37,6 +37,7 @@
               <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="my_img">
               @endisset
             </div>
+            <input type="hidden" name="id" value="{{$item->id}}">
             <input type="file" name="profile_img">
           </div>
           <!--画像ここまで-->
