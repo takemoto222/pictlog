@@ -33,22 +33,19 @@ class UserController extends Controller
 
     //後
     //マイページ編集
-    public function mypage_edit($id)
+    public function mypage_edit(Request $request)
     {
-    $form = $request->all('name', 'age', 'profile', 'image');
-    $images = $request->image;
-    if ($images->isValid()) {
-      $filePath = $images->store('public');
-      $images = str_replace('public/', '', $filePath);
-    } //nameをデータベースから全て取り出す formに渡す
-    $form['image'] = $images;
-    User::where('id', $request->id)->update($form); //‘id’, $request->idで更新するIDを特定、update($form)でnameを更新
-    return redirect("/{$request->id}");
-  }
-if ($images->isValid()) {
-      $filePath = $images->store('public');
-      $images = str_replace('public', '', $filePath);
+        $form = $request->all('name', 'age', 'profile', 'image');
+        $images = $request->image;
+        if ($images->isValid()) {
+            $filePath = $images->store('public');
+            $images = str_replace('public/', '', $filePath);
+        } //nameをデータベースから全て取り出す formに渡す
+        $form['image'] = $images;
+        User::where('id', $request->id)->update($form); //‘id’, $request->idで更新するIDを特定、update($form)でnameを更新
+        return redirect("/{$request->id}");
     }
+
 
     /*画像関係*/
     public function image(Request $request, User $user)
