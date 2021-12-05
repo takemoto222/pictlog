@@ -32,13 +32,13 @@
           <div class="my_img_edit">
             <div class="my_img_box">
               @isset($item->image)
-              <img src="/storage/{{$item->image}}" name=“image”　class="my_img">
+              <img src="/storage/{{$item->image}}" name="image" class="my_img">
               @else
               <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="my_img">
               @endisset
             </div>
             <input type="hidden" name="id" value="{{$item->id}}">
-            <input type="file" name=“image”>
+            <input type="file" name="image">
           </div>
           <!--画像ここまで-->
           <!--以下名前とプロフィール更新-->
