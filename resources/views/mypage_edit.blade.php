@@ -26,19 +26,19 @@
         <!--更新内容記入ここから-->
 
         <!--更新させたい-->
-        <form action="/edit_update/{{ $item->id }}" method="post">
+        <form action="/edit_update/{{ $item->id }}" enctype="multipart/form-data" method="post">
           @csrf
           <!--画像-->
           <div class="my_img_edit">
             <div class="my_img_box">
               @isset($item->image)
-              <img src="/storage/{{$item->image}}" class="my_img">
+              <img src="/storage/{{$item->image}}" name=“image”　class="my_img">
               @else
               <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="my_img">
               @endisset
             </div>
             <input type="hidden" name="id" value="{{$item->id}}">
-            <input type="file" name="profile_img">
+            <input type="file" name=“image”>
           </div>
           <!--画像ここまで-->
           <!--以下名前とプロフィール更新-->
