@@ -72,14 +72,16 @@
 .top_inner {
     width: 100%;
     display: flex;
+    background: #fff;
 }
+
 /*左*/
-.topmyimg_area {
+.top_my_img_area {
     width: 30%;
     height: 250px;
 }
 
-.topimg_box {
+.top_img_box {
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -119,6 +121,12 @@
 }
 
 .form_area {
+    margin-top: 25px;
+    margin-left: 50px;
+    display: flex;
+}
+
+.form_area_2 {
     margin-top: 25px;
     margin-left: 50px;
 }

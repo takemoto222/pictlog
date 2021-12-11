@@ -55,7 +55,7 @@
       <!--どのユーザーが更新するのかid特定-->
       <input type="hidden" name="id" value="{{$item->id}}">
       <!--自己紹介文記入-->
-      <textarea name="profile" rows=" 20" cols="100%" placeholder="自己紹介" class="textarea" value="{{$item->profile}}"></textarea>
+      <textarea name="profile" rows="15" cols="100%" placeholder="自己紹介" class="textarea" value="{{$item->profile}}"></textarea>
     </div>
 
     </div>

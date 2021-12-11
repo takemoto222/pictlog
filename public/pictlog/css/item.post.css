@@ -1,0 +1,129 @@
+/*全体*/
+.inner-box {
+    width: 960px;
+    background: #fff;
+    margin: auto;
+}
+
+/*ヘッダー部分*/
+
+/*ヘッダー全体*/
+.header {
+    background: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    border-bottom: 1px solid #b3afaf;
+}
+/*タイトル*/
+.header_ttl {
+    margin-left: 25%;
+}
+
+.header_ttl_h1 {
+    color: #000;
+    font-family: "Estonia", cursive;
+    font-size: 35px;
+}
+/*ナビ*/
+.nav {
+    display: flex;
+    margin-right: 20%;
+}
+
+/*名前領域*/
+.nav_list {
+    display: flex;
+    margin-right: 50px;
+    margin-top: 7%;
+}
+
+.nav_item {
+    /*アイコンそれぞれの箱*/
+    list-style: none;
+    margin-left: 40px;
+}
+
+.nav_item_a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    font-size: 18px;
+}
+/*ヘッダーのアイコン*/
+.header_icon_img {
+    width: 25px;
+    height: 25px;
+}
+
+.header_icon_img:hover {
+    opacity: 0.5;
+}
+/*ここまで*/
+
+/*投稿する画像 部分*/
+/*メイン　インナー*/
+.main_inner {
+    margin: 5% auto;
+}
+
+.post_inner {
+    width: 1080px;
+    height: 300px;
+}
+
+.img_list {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.img_li {
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    margin-top: 40px;
+}
+
+.post_img {
+    width: 200x;
+    height: 200px;
+}
+
+/*投稿インナー*/
+.post_inner {
+    width: 1080px;
+    margin: 0 auto;
+}
+/*投稿文*/
+.post_form {
+}
+
+.textarea {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+/**/
+.send_button {
+    text-align: center;
+    margin-left: 35%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background: #eee;
+    padding: 8px 14px;
+    color: #000;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-weight: bold;
+    text-decoration: none;
+    width: 160px;
+}
+
+.send_button:hover {
+    color: #fff;
+    background: #696969;
+}
