@@ -23,9 +23,13 @@
 
     <header class="header">
       <div class="header_ttl">
+        <!--練習-->
+        <!--@foreach($photos as photo)-->
         <h1 class="header_ttl_h1">
           <!--アプリタイトル記入-->
+
         </h1>
+        <!--@endforeach-->
       </div>
       <!--ナビバー-->
       <nav class="nav">
