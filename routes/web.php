@@ -11,15 +11,9 @@ use App\Http\Controllers\PostController;
 Route::get('/top', [TopController::class, 'top']);
 
 //アイテムページ
-//Route::get('/item_scr', [ItemController::class, 'item_scr']);
-//Route::get('/item_post', [ItemController::class, 'item_post']);
-//練習
-//練習
-//練習
-//Route::get('/item_scr/{id}', [PostController::class, 'item_scr']);
-//Route::post('/item_scr/create/{id}', [PostController::class, 'create']);
-//Route::get('/item_scr/update/{id}', [PostController::class, 'update']);
-//練習
+Route::get('/item_scr', [PostController::class, 'item_scr']);
+Route::get('/item_post', [PostController::class, 'item_post']);
+
 
 
 

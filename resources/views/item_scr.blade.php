@@ -23,7 +23,9 @@
 
     <header class="header">
       <div class="header_ttl">
-        <h1 class="header_ttl_h1">Pict Log</h1>
+        <h1 class="header_ttl_h1">
+          <!--アプリタイトル記入-->
+        </h1>
       </div>
       <!--ナビバー-->
       <nav class="nav">
@@ -58,11 +60,11 @@
             <div class="slide">
               <form action="" method="">
                 <ul>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
+                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
+                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
+                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
+                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
+                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
                 </ul>
               </form>
             </div>

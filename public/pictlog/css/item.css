@@ -171,7 +171,11 @@
     color: #696969;
 }
 
-/**/
+/*画像*/
+.item_img {
+    width: 100%;
+    height: 100%;
+}
 /**/
 .controller .indicator {
     display: flex;
