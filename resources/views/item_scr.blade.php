@@ -23,13 +23,15 @@
 
     <header class="header">
       <div class="header_ttl">
-        <!--練習-->
-        <!--@foreach($photos as photo)-->
+
+
         <h1 class="header_ttl_h1">
           <!--アプリタイトル記入-->
-
+          <!--練習-->
+          {{$photos->name}}
+          <!--練習-->
         </h1>
-        <!--@endforeach-->
+
       </div>
       <!--ナビバー-->
       <nav class="nav">
@@ -67,8 +69,8 @@
                   <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
                   <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
                   <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
-                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
-                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
+                  <li><img src="" name="image" alt="" /></li>
+                  <li><img src="" name="image" alt="" /></li>
                 </ul>
               </form>
             </div>

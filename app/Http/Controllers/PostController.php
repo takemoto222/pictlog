@@ -11,9 +11,9 @@ class PostController extends Controller
     //練習
     public function item_scr()
     {
-        //$photos = DB::select('select * from posts');
-        //return view('item_scr', ['photos' => $photos]);
-        return view('item_src');
+        $photos = DB::select('select * from posts');
+        return view('item_scr', ['photos' => $photos]);
+        return view('item_scr');
     }
     //public function item_add()
     //{
