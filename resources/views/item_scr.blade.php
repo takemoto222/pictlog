@@ -107,7 +107,7 @@
         @foreach($photos as $photo)
         <form action="/item_add" method="get">
           @csrf
-          <textarea name="discription" rows="20" cols="100%" placeholder="記事の内容" class="textarea">{{$photo->content}}</textarea>
+          <textarea name="content" rows="20" cols="100%" placeholder="記事の内容" class="textarea">{{$photo->content}}</textarea>
         </form>
         @endforeach
       </div>

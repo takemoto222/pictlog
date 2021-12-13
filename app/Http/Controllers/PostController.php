@@ -21,12 +21,12 @@ class PostController extends Controller
     }
     public function item_create(Request $request)
     {
-        return $request->all('content');
+        $request->all('');
         $param = [
             'name' => $request->name,
             'content' => $request->content,
         ];
         DB::insert('insert into posts(name, content) values(:name, :content)', $param);
-        return redirect('/');
+        return redirect('/item_scr');
     }
 }

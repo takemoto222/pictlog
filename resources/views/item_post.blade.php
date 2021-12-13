@@ -63,8 +63,8 @@
             </li>
           </ul>
           <!--投稿文-->
-          <textarea name="describe" rows="20" cols="100%" placeholder="投稿文" name="content" class="textarea"></textarea>
-          <a href="/item_scr"><input type="submit" name="" value="投稿" class="send_button"></a>
+          <textarea rows="20" cols="100%" placeholder="投稿文" name="content" class="textarea"></textarea>
+          <input type="submit" name="" value="投稿" class="send_button">
         </form>
       </div>
     </div>
