@@ -13,12 +13,11 @@ class PostController extends Controller
     {
         $photos = DB::select('select * from posts');
         return view('item_scr', ['photos' => $photos]);
-        return view('item_scr');
     }
 
     public function item_add()
     {
-        return view('item_add');
+        return view('item_post');
     }
     public function item_create(Request $request)
     {
