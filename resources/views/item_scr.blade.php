@@ -27,9 +27,6 @@
 
         <h1 class="header_ttl_h1">
           <!--アプリタイトル記入-->
-          <!--練習-->
-          {{$photos->name}}
-          <!--練習-->
         </h1>
 
       </div>
@@ -107,10 +104,12 @@
       <!--投稿内容-->
 
       <div class="item_discription">
-
-        <form action="" method="">
-          <textarea name="discription" rows="20" cols="100%" placeholder="記事の内容" class="textarea"></textarea>
+        @foreach($photos as $photo)
+        <form action="/item_add" method="get">
+          @csrf
+          <textarea name="discription" rows="20" cols="100%" placeholder="記事の内容" class="textarea">{{$photo->content}}</textarea>
         </form>
+        @endforeach
       </div>
 
 
@@ -124,9 +123,13 @@
             <li class="massage_icon_li">
               <!--ユーザーアイコン-->
             </li>
+            @foreach($photos as $photo)
             <li class="massage_icon_li">
               <!--ユーザーネーム-->
+
+              {{$photo->name}}
             </li>
+            @endforeach
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/like128.png') }}" class="massage_icon">
             </li>

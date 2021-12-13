@@ -12,9 +12,9 @@ Route::get('/top', [TopController::class, 'top']);
 
 //アイテムページ
 Route::get('/item_scr', [PostController::class, 'item_scr']);
-//Route::get('/item_post', [PostController::class, 'item_post']);
-//Route::get('/item_add', [PostController::class, 'item_add']);
-//Route::post('/item_add', [PostController::class, 'item_create']);
+//create
+Route::get('/item_add', [PostController::class, 'item_add']);
+Route::post('/item_add', [PostController::class, 'item_create']);
 
 
 

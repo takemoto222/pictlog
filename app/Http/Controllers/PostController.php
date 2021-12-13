@@ -15,17 +15,18 @@ class PostController extends Controller
         return view('item_scr', ['photos' => $photos]);
         return view('item_scr');
     }
-    //public function item_add()
-    //{
-    //    return view('item_add');
-    // }
-    // public function item_create(Request $request)
-    // {
-    //   $param = [
-    //     'name' => $request->name,
-    //   'content' => $request->content,
-    //];
-    // DB::insert('insert into posts(name, content, image) values(:name, :content, :image)', $param);
-    ////  return redirect('/');
-    // }
+
+    public function item_add()
+    {
+        return view('item_add');
+    }
+    public function item_create(Request $request)
+    {
+        $param = [
+            'name' => $request->name,
+            'content' => $request->content,
+        ];
+        DB::insert('insert into posts(name, content, image) values(:name, :content, :image)', $param);
+        return redirect('/');
+    }
 }

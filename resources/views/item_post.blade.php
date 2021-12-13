@@ -39,8 +39,12 @@
     <!--全体の箱-->
     <div class="main_inner">
       <!--投稿する画像を貼る-->
+
       <div class="post_inner">
-        <form action="" method="" class="post_form">
+        <!--form-->
+        <form action="/item_add" method="post" class="post_form">
+          @csrf
+          <!--画像-->
           <ul class="img_list">
             <li class="img_li">
               <img src="#" alt="画像" class="post_img">
@@ -59,7 +63,7 @@
             </li>
           </ul>
           <!--投稿文-->
-          <textarea name="describe" rows="20" cols="100%" placeholder="投稿文" class="textarea"></textarea>
+          <textarea name="describe" rows="20" cols="100%" placeholder="投稿文" class="textarea"><input type="text" name="content"></textarea>
           <input type="submit" name="" value="投稿" class="send_button">
         </form>
       </div>
