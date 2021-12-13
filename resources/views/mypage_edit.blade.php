@@ -47,9 +47,6 @@
           <!--更新したい名前を記入-->
           <input class="name_area" type="text" name="name" placeholder="名前" value="{{$item->name}}">
           <!--名前ここまで-->
-          <input type="hidden" name="id" value="{{$item->id}}">
-          <input class="name_area" placeholder="年齢" type="" name=" age" value="{{$item->age}}">
-          <!--ageここまで-->
       </div>
       <!--my_name_ageの閉じdiv-->
       <!--どのユーザーが更新するのかid特定-->

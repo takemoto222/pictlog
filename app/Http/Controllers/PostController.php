@@ -21,7 +21,7 @@ class PostController extends Controller
     }
     public function item_create(Request $request)
     {
-        return $request->all();
+        return $request->all('content');
         $param = [
             'name' => $request->name,
             'content' => $request->content,
