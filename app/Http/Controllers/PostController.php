@@ -30,12 +30,12 @@ class PostController extends Controller
         DB::insert('insert into posts(name, content,image) values(:name, :content, :image)', $param);
         return redirect('/item_scr');
     }
-    public function item_store(Request $request)
+    public function item_image(Request $request)
     {
+        $image = $request->image;
         $image = $request->file('image')->store('public/image');
-        $image =
-            str_relace('public/image/', '', $image);
-        $image = new Image;
+        $image = str_replace('public/image/', '', $image);
+        $image = new Post;
         $image->file = $image;
 
         $image->save();

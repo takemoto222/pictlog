@@ -61,11 +61,12 @@
 
             <!--スライド中身-->
             <div class="slide">
-              <form action="" method="">
+              <form action="/item_scr/{{ $photos->image }}" method="get">
+                @csrf
                 <ul>
-                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
-                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
-                  <li><img src="/storage/yasai1.jpg" name="image" alt="" /></li>
+                  <li><img src="/storage/yasai1.jpg" name="image" alt="画像" /></li>
+                  <li><img src="{{$photos->image}}" name="image" alt="" /></li>
+                  <li><img src="" name="image" alt="" /></li>
                   <li><img src="" name="image" alt="" /></li>
                   <li><img src="" name="image" alt="" /></li>
                 </ul>
