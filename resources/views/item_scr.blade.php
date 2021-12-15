@@ -61,8 +61,9 @@
 
             <!--スライド中身-->
             <div class="slide">
-              @for($i = 0; $i < 5; $i++) <form action="/item_scr/{{ $photos->image }}" method="get">
+              <form action="/item_scr/{{ $photos->image }}" method="get">
                 @csrf
+                @foreach($photos as $photo)
                 <ul>
                   <li><img src="/storage/yasai1.jpg" name="image" alt="画像" /></li>
                   <li><img src="{{$photos->image}}" name="image" alt="" /></li>
@@ -70,8 +71,9 @@
                   <li><img src="" name="image" alt="" /></li>
                   <li><img src="" name="image" alt="" /></li>
                 </ul>
-                </form>
-                @endfor
+                @endforeach
+              </form>
+
             </div>
 
           </div>
