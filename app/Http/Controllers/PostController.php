@@ -12,6 +12,7 @@ class PostController extends Controller
     public function item_scr()
     {
         $photos = DB::select('select * from posts');
+        //dd($photos); //dd()関数は変数の中身を表示してくれる関数で、この時点で処理は停止
         return view('item_scr', ['photos' => $photos]);
     }
 
