@@ -125,7 +125,7 @@
             </li>
             @foreach($photos as $photo)
             <li class="massage_icon_li">
-              <!--ユーザーネーム-->
+              <!--ユーザーアイコンと名前-->
 
               {{$photo->name}}
             </li>

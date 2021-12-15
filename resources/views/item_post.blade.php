@@ -42,12 +42,12 @@
 
       <div class="post_inner">
         <!--form-->
-        <form action="/item_add" method="post" class="post_form">
+        <form action="/item_add" method="post" class="post_form" enctype="multipart/form-data">
           @csrf
           <!--画像-->
           <ul class="img_list">
             <li class="img_li">
-              <img src="#" alt="画像" class="post_img">
+              <input type="file" name="image" class="post_img">
             </li>
             <li class="img_li">
               <img src="#" alt="画像" class="post_img">
@@ -63,7 +63,7 @@
             </li>
           </ul>
           <!--投稿文-->
-          <textarea rows="20" cols="100%" placeholder="投稿文" name="content" class="textarea"></textarea>
+          <textarea rows="15" cols="100%" placeholder="投稿文" name="content" class="textarea"></textarea>
           <input type="submit" name="" value="投稿" class="send_button">
         </form>
       </div>

@@ -21,12 +21,23 @@ class PostController extends Controller
     }
     public function item_create(Request $request)
     {
-        $request->all('');
+        $request->all();
         $param = [
             'name' => $request->name,
             'content' => $request->content,
+            'image' => $request->image,
         ];
-        DB::insert('insert into posts(name, content) values(:name, :content)', $param);
+        DB::insert('insert into posts(name, content,image) values(:name, :content, :image)', $param);
         return redirect('/item_scr');
+    }
+    public function item_store(Request $request)
+    {
+        $image = $request->file('image')->store('public/image');
+        $image =
+            str_relace('public/image/', '', $image);
+        $image = new Image;
+        $image->file = $image;
+
+        $image->save();
     }
 }
