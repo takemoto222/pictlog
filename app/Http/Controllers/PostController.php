@@ -42,7 +42,7 @@ class PostController extends Controller
         $param = [
             'name' => $request->name,
             'content' => $request->content,
-            'image' => $request->image,
+            'image' => $image,
         ];
         DB::insert('insert into posts(name, content, image) values(:name, :content, :image)', $param);
         return redirect('/item_scr');
