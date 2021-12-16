@@ -42,15 +42,21 @@
 
       <div class="post_inner">
         <!--form-->
+
         <form action="/item_add" method="post" class="post_form" enctype="multipart/form-data">
           @csrf
           <!--画像-->
+          @isset($photo->image)
+          <img src="/storage/{{$photo->image}}" name="image" class="post_image">
+          @else
+          <img src="{{ asset('pistlog/img/noimage.png') }}">
+          @endisset
           <ul class="img_list">
             <li class="img_li">
               <input type="file" name="image" class="post_img">
             </li>
             <li class="img_li">
-              <img src="#" alt="画像" class="post_img">
+              <input type="file" name="image" class="post_img">
             </li>
             <li class="img_li">
               <img src="#" alt="画像" class="post_img">
@@ -64,8 +70,10 @@
           </ul>
           <!--投稿文-->
           <textarea rows="15" cols="100%" placeholder="投稿文" name="content" class="textarea"></textarea>
-          <input type="submit" name="" value="投稿" class="send_button">
+          <input type="submit" value="投稿" class="send_button">
+
         </form>
+
       </div>
     </div>
   </body>

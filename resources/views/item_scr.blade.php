@@ -43,7 +43,7 @@
     </header>
 
 
-
+    @foreach($photos as $photo)
     <!--全体の箱-->
     <div class="inner-box">
       <!--投稿された画像-->
@@ -61,18 +61,23 @@
 
             <!--スライド中身-->
             <div class="slide">
-              <form action="/item_scr/{{ $photos->image }}" method="get">
+
+              <form action="/item_scr/{{ $photo->image }}" method="get">
                 @csrf
-                @foreach($photos as $photo)
+
                 <ul>
-                  <li><img src="/storage/yasai1.jpg" name="image" alt="画像" /></li>
-                  <li><img src="{{$photos->image}}" name="image" alt="" /></li>
+                  @isset($photo->image)
+                  <li><img src="{{$photo->image}}" name="image" alt="画像" /></li>
+                  <li><img src="" name="image" alt="" /></li>
                   <li><img src="" name="image" alt="" /></li>
                   <li><img src="" name="image" alt="" /></li>
                   <li><img src="" name="image" alt="" /></li>
                 </ul>
-                @endforeach
+                @else
+                <img src="{{ asset('pictlog/img/noimage.png') }}" class="top_my_img">
+                @endisset
               </form>
+
 
             </div>
 
@@ -108,12 +113,12 @@
       <!--投稿内容-->
 
       <div class="item_discription">
-        @foreach($photos as $photo)
+
         <form action="/item_add" method="get">
           @csrf
           <textarea name="content" rows="20" cols="100%" placeholder="記事の内容" class="textarea">{{$photo->content}}</textarea>
         </form>
-        @endforeach
+
       </div>
 
 
@@ -127,13 +132,13 @@
             <li class="massage_icon_li">
               <!--ユーザーアイコン-->
             </li>
-            @foreach($photos as $photo)
+
             <li class="massage_icon_li">
               <!--ユーザーアイコンと名前-->
 
               {{$photo->name}}
             </li>
-            @endforeach
+
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/like128.png') }}" class="massage_icon">
             </li>
@@ -142,6 +147,7 @@
             </li>
           </ul>
         </div>
+        @endforeach
         <!--コメントエリア-->
         <div class="comment_area"></div>
       </div>
