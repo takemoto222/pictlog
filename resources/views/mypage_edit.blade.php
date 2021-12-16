@@ -30,7 +30,7 @@
           @csrf
           <!--画像-->
           <div class="my_img_edit">
-            <div class="my_img_box">
+            <div class="my_img_box" class="my_img">
               @isset($item->image)
               <img src="/storage/{{$item->image}}" name="image" class="my_img">
               @else

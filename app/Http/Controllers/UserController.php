@@ -28,10 +28,9 @@ class UserController extends Controller
         User::where('id', $request->id)->update($form); //'id', $request->idで更新するIDを特定、update($form)でnameを更新
         return redirect("/{$request->id}");
     }
-    //練習
 
 
-    //後
+
     //マイページ編集
     public function mypage_edit($id)
     {

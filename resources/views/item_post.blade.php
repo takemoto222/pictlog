@@ -55,18 +55,6 @@
             <li class="img_li">
               <input type="file" name="image" class="post_img">
             </li>
-            <li class="img_li">
-              <input type="file" name="image" class="post_img">
-            </li>
-            <li class="img_li">
-              <img src="#" alt="画像" class="post_img">
-            </li>
-            <li class="img_li">
-              <img src="#" alt="画像" class="post_img">
-            </li>
-            <li class="img_li">
-              <img src="#" alt="画像" class="post_img">
-            </li>
           </ul>
           <!--投稿文-->
           <textarea rows="15" cols="100%" placeholder="投稿文" name="content" class="textarea"></textarea>

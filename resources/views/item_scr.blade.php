@@ -67,11 +67,7 @@
 
                 <ul>
                   @isset($photo->image)
-                  <li><img src="{{$photo->image}}" name="image" alt="画像" /></li>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
-                  <li><img src="" name="image" alt="" /></li>
+                  <li><img src="{{Storage::url($photo->image)}}" value=" {{$photo->name}}" name=" image" alt="画像" /></li>
                 </ul>
                 @else
                 <img src="{{ asset('pictlog/img/noimage.png') }}" class="top_my_img">
@@ -147,14 +143,14 @@
             </li>
           </ul>
         </div>
-        @endforeach
+
         <!--コメントエリア-->
         <div class="comment_area"></div>
       </div>
 
       <!--savascript-->
       <script src="{{ asset('pictlog/js/item.js') }}"></script>
-
+      @endforeach
     </div>
   </body>
 </thml>

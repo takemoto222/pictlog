@@ -20,17 +20,34 @@ class PostController extends Controller
     {
         return view('item_post');
     }
+    // public function item_create(Request $request)
+    // {
+    //  $request->all();
+    //  $param = [
+    //   'name' => $request->name,
+    // 'content' => $request->content,
+    // 'image' => $request->image,
+    //  ];
+    // DB::insert('insert into posts(name, content,//image) values(:name, :content, :image)', $param);
+    // return redirect('/item_scr');
+    //}
     public function item_create(Request $request)
     {
         $request->all();
+        $image_file = $request->image;
+        $image_file = $request->file('image')->store('public/image');
+        $image_file = str_replace('public/image/', '', $image_file);
+        $image = new Post;
+        $image = $image_file;
         $param = [
             'name' => $request->name,
             'content' => $request->content,
             'image' => $request->image,
         ];
-        DB::insert('insert into posts(name, content,image) values(:name, :content, :image)', $param);
+        DB::insert('insert into posts(name, content, image) values(:name, :content, :image)', $param);
         return redirect('/item_scr');
     }
+
     public function item_image(Request $request)
     {
         $image = $request->image;
