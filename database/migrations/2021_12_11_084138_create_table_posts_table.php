@@ -20,7 +20,10 @@ class CreateTablePostsTable extends Migration
             $table->string('name', 255)->nullable();
             $table->string('content', 1000)->nullable();
             $table->string('image')->nullable();
-            $table->string('image2')->nullable();
+            $table->string('image2')->nullable(); /*投稿画像数追加*/
+            $table->string('image3')->nullable(); /*投稿画像数追加*/
+            $table->string('image4')->nullable(); /*投稿画像数追加*/
+            $table->string('image5')->nullable(); /*投稿画像数追加*/
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

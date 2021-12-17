@@ -67,9 +67,13 @@
 
                 <ul>
                   @isset($photo->image)
-                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" multiple /></li>
+                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" class="slide_img_first" multiple /></li>
 
-                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image2" alt="画像" multiple /></li>
+                  <li><img src="storage/image/{{($photo->image2)}}" value="{{$photo->name}}" name="image2" alt="画像" class="slide_img_list" multiple /></li>
+
+                  <li><img src="storage/image/{{($photo->image3)}}" value="{{$photo->name}}" name="image3" alt="画像" multiple /></li>
+                  <li><img src="storage/image/{{($photo->image4)}}" value="{{$photo->name}}" name="image4" alt="画像" multiple /></li>
+                  <li><img src="storage/image/{{($photo->image5)}}" value="{{$photo->name}}" name="image5" alt="画像" multiple /></li>
                 </ul>
                 @else
                 <img src="{{ asset('pictlog/img/noimage.png') }}" class="top_my_img">
@@ -103,8 +107,6 @@
         <span></span>
         <span></span>
         <span></span>
-        <span></span>
-
       </div>
       <!--下のポインターここまで-->
 

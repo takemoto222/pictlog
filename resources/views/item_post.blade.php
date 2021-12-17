@@ -59,6 +59,15 @@
             <li class="img_li">
               <input type="file" name="image2" class="post_img" multiple>
             </li>
+            <li class="img_li">
+              <input type="file" name="image3" class="post_img" multiple>
+            </li>
+            <li class="img_li">
+              <input type="file" name="image4" class="post_img" multiple>
+            </li>
+            <li class="img_li">
+              <input type="file" name="image5" class="post_img" multiple>
+            </li>
 
 
           </ul>
