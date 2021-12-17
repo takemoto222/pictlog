@@ -68,10 +68,8 @@
                 <ul>
                   @isset($photo->image)
                   <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" multiple /></li>
-                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" multiple /></li>
-                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" multiple /></li>
-                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" multiple /></li>
-                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" multiple /></li>
+
+                  <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image2" alt="画像" multiple /></li>
                 </ul>
                 @else
                 <img src="{{ asset('pictlog/img/noimage.png') }}" class="top_my_img">

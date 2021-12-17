@@ -13,6 +13,7 @@ class PostController extends Controller
     {
         $photos = DB::select('select * from posts');
         //dd($photos); //dd()関数は変数の中身を表示してくれる関数で、この時点で処理は停止
+        dd($photos);
         return view('item_scr', ['photos' => $photos]);
     }
 
@@ -43,6 +44,7 @@ class PostController extends Controller
             'name' => $request->name,
             'content' => $request->content,
             'image' => $image,
+            /*'user_id' => $request->user_id,*/
         ];
         DB::insert('insert into posts(name, content, image) values(:name, :content, :image)', $param);
         return redirect('/item_scr');
@@ -51,6 +53,7 @@ class PostController extends Controller
     public function item_image(Request $request)
     {
         $image = $request->image;
+        $image = $request->image2;
         $image = $request->file('image')->store('public/image');
         $image = str_replace('public/image/', '', $image);
         $image = new Post;
