@@ -20,6 +20,7 @@ class CreateTablePostsTable extends Migration
             $table->string('name', 255)->nullable();
             $table->string('content', 1000)->nullable();
             $table->string('image')->nullable();
+            $table->string('image2')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

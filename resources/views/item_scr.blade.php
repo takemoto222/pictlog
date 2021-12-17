@@ -128,11 +128,11 @@
         <div class="icon_area">
           <ul class="icon_area_list">
             <li class="massage_icon_li">
-              <!--ユーザーアイコン-->
+              <!--userテーブルからここにユーザーアイコンを表示させる-->
             </li>
 
             <li class="massage_icon_li">
-              <!--ユーザーアイコンと名前-->
+              <!--userテーブルからここにユーザー名を表示させる-->
 
               {{$photo->name}}
             </li>
