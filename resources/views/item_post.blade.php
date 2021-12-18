@@ -53,22 +53,30 @@
           @endisset
           <ul class="img_list">
             <li class="img_li">
-              <input type="file" id="myImage1" accept="image/*" name="image" class="post_img" multiple>
               <img id="preview1" class="test_img">
+              <input type="file" id="myImage1" accept="image/*" name="image" class="post_img" multiple>
+
             </li>
 
             <li class="img_li">
-              <input type="file" id="myImage1" accept="image/*" name="image2" class="post_img" multiple>
-              <img id="preview1" class="test_img">
+              <img id="preview2" class="test_img">
+              <input type="file" id="myImage2" accept="image/*" name="image2" class="post_img" multiple>
+
             </li>
             <li class="img_li">
-              <input type="file" name="image3" class="post_img" multiple>
+              <img id="preview3" class="test_img">
+              <input type="file" id="myImage3" accept="image/*" name="image3" class="post_img" multiple>
+
             </li>
             <li class="img_li">
-              <input type="file" name="image4" class="post_img" multiple>
+              <img id="preview4" class="test_img">
+              <input type="file" id="myImage4" accept="image/*" name="image4" class="post_img" multiple>
+
             </li>
             <li class="img_li">
-              <input type="file" name="image5" class="post_img" multiple>
+              <img id="preview5" class="test_img">
+              <input type="file" id="myImage5" accept="image/*" name="image5" class="post_img" multiple>
+
             </li>
 
 

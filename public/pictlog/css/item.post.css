@@ -88,9 +88,19 @@
     margin-top: 40px;
 }
 
+/*写真導入部分*/
 .post_img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 50px;
+}
+
+/*画像サイズ*/
+.test_img {
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*投稿インナー*/
@@ -98,6 +108,7 @@
     width: 1080px;
     margin: 0 auto;
 }
+
 /*投稿文*/
 .post_form {
 }
@@ -126,11 +137,4 @@
 .send_button:hover {
     color: #fff;
     background: #696969;
-}
-
-
-/*画像サイズ*/
-.test_img {
-    width: 150px;
-    height: 150px;
 }
