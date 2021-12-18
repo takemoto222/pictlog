@@ -1,7 +1,6 @@
-$('#myImage').on('change', function (e) {
-    var reader = new FileReader();
-    reader.onload = function (e) {
-        $("#preview").attr('src', e.target.result);
-    }
-    reader.readAsDataURL(e.target.files[0]);
+const target1 = document.getElementById("myImage1");
+const preview1 = document.getElementById("preview1");
+target1.addEventListener("change", (e) => {
+    const url = URL.createObjectURL(e.target.files[0]);
+    preview1.style.backgroundImage = `url(${url})`;
 });

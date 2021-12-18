@@ -127,3 +127,10 @@
     color: #fff;
     background: #696969;
 }
+
+
+/*画像サイズ*/
+.test_img {
+    width: 150px;
+    height: 150px;
+}
