@@ -11,4 +11,8 @@ class TopController extends Controller
     {
         return view('top');
     }
+    public function logout_top()
+    {
+        return view('logout_top');
+    }
 }

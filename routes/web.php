@@ -7,6 +7,10 @@ use App\Http\Controllers\PostController;
 
 
 
+//ログイン
+Route::get('/login', [TopController::class, 'login']);
+//トップページログアウト
+Route::get('/logout_top', [TopController::class, 'logout_top']);
 //トップページ
 Route::get('/top', [TopController::class, 'top']);
 

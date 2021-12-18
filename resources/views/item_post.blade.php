@@ -53,11 +53,13 @@
           @endisset
           <ul class="img_list">
             <li class="img_li">
-              <input type="file" name="image" class="post_img" multiple>
+              <input type="file" id="myImage" accept="image/*" name="image" class="img_li" multiple>
+              <img id="preview">
             </li>
 
             <li class="img_li">
-              <input type="file" name="image2" class="post_img" multiple>
+              <input type="file" id="myImage" accept="image/*" name="image2" class="post_img" multiple>
+              <img id="preview">
             </li>
             <li class="img_li">
               <input type="file" name="image3" class="post_img" multiple>
@@ -78,6 +80,8 @@
         </form>
 
       </div>
+      <script src="{{ asset('pictlog/js/item.post.js') }}"></script>
+
     </div>
   </body>
 </thml>

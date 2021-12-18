@@ -9,7 +9,11 @@ class Post extends Model
 {
     protected $fillable = ['content', 'user_id'];
 
-
+    protected $guarded = array('id');
+    public static $rules = array(
+        'user_id' => 'required',
+        'name' => 'required',
+    );
 
     public function getDetail()
     {
