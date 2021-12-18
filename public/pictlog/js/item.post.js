@@ -1,6 +1,8 @@
+const target = document.getElementsByClassName("post_img");
+const preview = document.getElementsByClassName("test_img");
 for (i = 0; i < 5; i++) {
-const target = document.getElementByClassName("post_img");
-const preview = document.getElementByClassName("test_img");
-console.log(target[i]);
-console.log(preview[i]);
+    target[i].addEventListener("change", function (e) {
+        const url = URL.createObjectURL(e.target.files[0]);
+        preview[i].style.backgroundImage = `url(${url})`;
+    });
 }

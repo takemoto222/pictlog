@@ -54,31 +54,30 @@
           <ul class="img_list">
             <li class="img_li">
               <img id="preview1" class="test_img">
-              <input type="file" id="myImage1" accept="image/*" name="image" class="post_img" multiple>
+              <input type="file" class="post_img" id="myImage1" accept="image/*" name="image" multiple>
 
             </li>
 
             <li class="img_li">
               <img id="preview2" class="test_img">
-              <input type="file" id="myImage2" accept="image/*" name="image2" class="post_img" multiple>
+              <input type="file" class="post_img" id="myImage2" accept="image/*" name="image2" multiple>
 
             </li>
             <li class="img_li">
               <img id="preview3" class="test_img">
-              <input type="file" id="myImage3" accept="image/*" name="image3" class="post_img" multiple>
+              <input type="file" class="post_img" id="myImage3" accept="image/*" name="image3" multiple>
 
             </li>
             <li class="img_li">
               <img id="preview4" class="test_img">
-              <input type="file" id="myImage4" accept="image/*" name="image4" class="post_img" multiple>
+              <input type="file" class="post_img" id="myImage4" accept="image/*" name="image4" multiple>
 
             </li>
             <li class="img_li">
               <img id="preview5" class="test_img">
-              <input type="file" id="myImage5" accept="image/*" name="image5" class="post_img" multiple>
+              <input type="file" class="post_img" id="myImage5" accept="image/*" name="image5" multiple>
 
             </li>
-
 
           </ul>
           <!--投稿文-->
