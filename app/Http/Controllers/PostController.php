@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -18,6 +19,8 @@ class PostController extends Controller
 
     public function item_add()
     {
+        $user = Auth::user(); //追加行
+        return $user; //追加行
         return view('item_post');
     }
     // public function item_create(Request $request)
