@@ -25,14 +25,17 @@ Route::post('/item_add', [PostController::class, 'item_create']);
 
 
 //index マイページ
-Route::get('/{id}', [UserController::class, 'index']);
-Route::post('/create/{id}', [UserController::class, 'create']);
-Route::get('/update/{id}', [UserController::class, 'update']);
+//Route::get('/{id}', [UserController::class, 'index']);
+//Route::post('/create/{id}', [UserController::class, 'create']);
+////Route::get('/update/{id}', [UserController::class, 'update']);
 //練習
 
 
 //後
 //マイページ編集
-Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit']);
-Route::post('/edit_update/{id}', [UserController::class, 'edit_update']);
+//Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit']);
+//Route::post('/edit_update/{id}', [UserController::class, 'edit_update']);
 //画像
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
