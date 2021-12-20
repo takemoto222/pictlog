@@ -25,16 +25,16 @@ Route::post('/item_add', [PostController::class, 'item_create']);
 
 
 //index マイページ
-Route::get('/{id}', [UserController::class, 'index']);
-Route::post('/create/{id}', [UserController::class, 'create']);
-Route::get('/update/{id}', [UserController::class, 'update']);
+Route::get('/{id}', [UserController::class, 'index'])->name('index')->where('id', '(.*)');
+Route::post('/create/{id}', [UserController::class, 'create'])->name('create')->where('id', '(.*)');
+Route::get('/update/{id}', [UserController::class, 'update'])->name('update')->where('id', '(.*)');
 //練習
 
 
 //後
 //マイページ編集
-Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit']);
-Route::post('/edit_update/{id}', [UserController::class, 'edit_update']);
+Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit'])->name('mypage_edit')->where('id', '(.*)');
+Route::post('/edit_update/{id}', [UserController::class, 'edit_update'])->name('edit_update')->where('id', '(.*)');
 //画像
 
 Auth::routes();
