@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset('pictlog/css/mypage.edit.css')  }}">
+    <link rel="stylesheet" href="{{ asset('pictlog/css/register.new.css')  }}">
     <link rel="stylesheet" href="{{ ('css/reset.css') }}">
     <!--タイトルフォント-->
     <link rel="preconnect" href="https://fonts.googleapis.com">

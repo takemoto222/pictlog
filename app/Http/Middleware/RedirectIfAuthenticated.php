@@ -21,11 +21,11 @@ class RedirectIfAuthenticated
     {
         $guards = empty($guards) ? [null] : $guards;
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect('item_add');
-            }
-        }
+        // foreach ($guards as $guard) {
+        //if (Auth::guard($guard)->check()) {
+        //       return redirect('top');
+        //    }
+        // }
 
         return $next($request);
     }

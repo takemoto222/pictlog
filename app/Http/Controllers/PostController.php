@@ -19,9 +19,9 @@ class PostController extends Controller
 
     public function item_add()
     {
-        $user = Auth::user(); //追加行
-        return $user; //追加行
-        return view('item_post');
+        // $user = Auth::user(); //追加行
+        //return $user; //追加行
+        return view('top');
     }
     // public function item_create(Request $request)
     // {

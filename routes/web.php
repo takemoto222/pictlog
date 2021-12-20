@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\PostController;
-
+use Illuminate\Support\Facades\Auth;
 
 
 //ログイン
@@ -36,6 +36,7 @@ Route::post('/item_add', [PostController::class, 'item_create']);
 //Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit']);
 //Route::post('/edit_update/{id}', [UserController::class, 'edit_update']);
 //画像
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
