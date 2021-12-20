@@ -12,7 +12,7 @@ Route::get('/login', [TopController::class, 'login']);
 //トップページログアウト
 Route::get('/logout_top', [TopController::class, 'logout_top']);
 //トップページ
-Route::get('/top', [TopController::class, 'top']);
+Route::get('/top', [TopController::class, 'top'])->name('top');
 
 //アイテムページ
 Route::get('/item_scr', [PostController::class, 'item_scr']);
@@ -25,16 +25,16 @@ Route::post('/item_add', [PostController::class, 'item_create']);
 
 
 //index マイページ
-Route::get('/{id}', [UserController::class, 'index'])->name('index')->where('id', '(.*)');
-Route::post('/create/{id}', [UserController::class, 'create'])->name('create')->where('id', '(.*)');
-Route::get('/update/{id}', [UserController::class, 'update'])->name('update')->where('id', '(.*)');
+Route::get('/{id}', [UserController::class, 'index'])->name('index');
+Route::post('/create/{id}', [UserController::class, 'create'])->name('create');
+Route::get('/update/{id}', [UserController::class, 'update'])->name('update');
 //練習
 
 
 //後
 //マイページ編集
-Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit'])->name('mypage_edit')->where('id', '(.*)');
-Route::post('/edit_update/{id}', [UserController::class, 'edit_update'])->name('edit_update')->where('id', '(.*)');
+Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit'])->name('mypage_edit');
+Route::post('/edit_update/{id}', [UserController::class, 'edit_update'])->name('edit_update');
 //画像
 
 Auth::routes();

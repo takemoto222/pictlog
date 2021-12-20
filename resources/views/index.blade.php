@@ -29,7 +29,7 @@
             <li class="nav_item"><a href="/index/{id}" class="nav_item_a"><img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img"></a></li>
 
             <!--変更しました-->
-            <li class="nav_item"><a href="{{Form::open(['url' => route('/mypage_edit', ['id' => '/']), 'method' => 'get'])}}" class="nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
+            <li class="nav_item"><a href="{{route('index', ['id' => $user->id])}}" class=" nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
 
 
             <li class="nav_item"><a href="/contact" class="nav_item_a"><img src="{{ asset('pictlog/img/iconmall3.png') }}" class="header_icon_img"></a></li>
