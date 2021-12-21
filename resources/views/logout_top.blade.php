@@ -28,8 +28,8 @@
       <!--ナビバー-->
       <nav class="nav">
         <ul class="nav_list">
-          <li class="nav_item"><a href="login.html" class="nav_item_a">ログイン</a></li>
-          <li class="nav_item"><a href="register.html" class="nav_item_a">会員登録</a></li>
+          <li class="nav_item"><a href="/login" class="nav_item_a">ログイン</a></li>
+          <li class="nav_item"><a href="/register" class="nav_item_a">会員登録</a></li>
 
         </ul>
       </nav>

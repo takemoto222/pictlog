@@ -6,12 +6,14 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class PostController extends Controller
 {
     //練習
-    public function item_scr()
+    public function item_scr($id)
     {
+        $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         $photos = DB::select('select * from posts');
         //dd($photos); //dd()関数は変数の中身を表示してくれる関数で、この時点で処理は停止
         return view('item_scr', ['photos' => $photos]);

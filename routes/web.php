@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 
 //ログイン
 Route::get('/login', [TopController::class, 'login']);
+//新規登録
+Route::get('/register', [TopController::class, '/register']);
 //トップページログアウト
 Route::get('/logout_top', [TopController::class, 'logout_top']);
 //トップページ
@@ -26,8 +28,8 @@ Route::post('/item_add', [PostController::class, 'item_create']);
 
 //index マイページ
 Route::get('/{id}', [UserController::class, 'index'])->name('index');
-Route::post('/create/{id}', [UserController::class, 'create'])->name('create');
-Route::get('/update/{id}', [UserController::class, 'update'])->name('update');
+Route::post('/create/{id}', [UserController::class, 'create']);
+Route::get('/update/{id}', [UserController::class, 'update']);
 //練習
 
 

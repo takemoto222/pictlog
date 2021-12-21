@@ -7,8 +7,9 @@ use App\Models\User;
 
 class TopController extends Controller
 {
-    public function top()
+    public function top($id)
     {
+        $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         return view('top');
     }
     public function logout_top()
