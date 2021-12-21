@@ -10,7 +10,7 @@ class TopController extends Controller
     public function top($id)
     {
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
-        return view('top');
+        return view('top', ['item' => $items]);
     }
     public function logout_top()
     {

@@ -27,7 +27,7 @@
 
           <!--変更しました,
         topのリンクからマイページへ飛びたい-->
-          <li class="nav_item"><a href="{{route('index', ['id' => $user->id])}}" class=" nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
+          <li class="nav_item"><a href="{{ url("user/$items->user->id") }}" class=" nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
 
           <li class="nav_item"><a href="/mypage_edit/{id}" class="nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
 
