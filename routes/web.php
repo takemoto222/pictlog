@@ -17,9 +17,9 @@ Route::get('/logout_top', [TopController::class, 'logout_top']);
 Route::get('/top', [TopController::class, 'top'])->name('top');
 
 //アイテムページ
-Route::get('/item_scr', [PostController::class, 'item_scr']);
+Route::get('/item_scr', [PostController::class, 'item_scr'])->name('item_scr');
 //create
-Route::get('/item_add', [PostController::class, 'item_add']);
+Route::get('/item_add', [PostController::class, 'item_add'])->name('item_add');
 Route::post('/item_add', [PostController::class, 'item_create']);
 
 
