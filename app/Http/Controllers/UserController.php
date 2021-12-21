@@ -14,6 +14,9 @@ class UserController extends Controller
     //練習
     public function index($id)
     {
+        $id = Auth::id();
+        $id = User::find($id);
+        return view('item_add', ['id' => $id]);
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         return view('index', ['item' => $items]);
     }
