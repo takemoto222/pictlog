@@ -14,7 +14,7 @@ class TopController extends Controller
     {
         $id = Auth::id();
         $id = User::find($id);
-        return view('top', ['id' => $id]);
+        return view('mypage_edit', ['item' => $id]);
     }
     public function logout_top()
     {
