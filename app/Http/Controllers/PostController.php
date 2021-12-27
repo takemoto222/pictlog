@@ -11,7 +11,7 @@ use App\Models\User;
 class PostController extends Controller
 {
     //練習
-    public function item_scr($id)
+    public function item_scr()
     {
         //$items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         $photos = DB::select('select * from posts');
@@ -23,7 +23,7 @@ class PostController extends Controller
     {
         $id = Auth::id();
         $id = User::find($id);
-        return view('item_add', ['id' => $id]);
+        return view('item_post', ['id' => $id]);
         // $user = Auth::user(); //追加行
         //return $user; //追加行
     }
