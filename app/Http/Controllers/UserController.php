@@ -15,10 +15,10 @@ class UserController extends Controller
     public function index($id)
     {
         //新しい記述
-        $id = Auth::id();
-        $id = User::find($id);
+        //$id = Auth::id();
+        //$id = User::find($id);
         return view('item_scr', ['id' => $id]);
-         //新しい記述ここまで
+        //新しい記述ここまで
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         return view('index', ['item' => $items]);
     }

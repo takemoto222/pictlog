@@ -27,7 +27,7 @@
             <li class="nav_item"><a href="/top" class="nav_item_a"><img src="{{ asset('pictlog/img/iconhome2.png')}}" class="header_icon_img"></a></li>
             <!--マイページリンク-->
             <li class="nav_item">
-              <a href="{{route('mypage.edit', ['id' => $id->id])}}" class=" nav_item_a">
+              <a href="" class=" nav_item_a">
                 <img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img">
               </a>
             </li>
