@@ -20,7 +20,7 @@ Route::get('/top', [TopController::class, 'top'])->name('top');
 Route::get('/item_scr', [PostController::class, 'item_scr'])->name('item_scr');
 //create
 Route::get('/item_add', [PostController::class, 'item_add'])->name('item_add');
-Route::post('/item_add', [PostController::class, 'item_create']);
+Route::post('/item_add', [PostController::class, 'item_create'])->name('item_create');
 
 
 
