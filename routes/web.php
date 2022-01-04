@@ -39,6 +39,10 @@ Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit'])->name('m
 Route::post('/edit_update/{id}', [UserController::class, 'edit_update'])->name('edit_update');
 //画像
 
+
+
+
+//認証
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -19,6 +19,7 @@ class UserController extends Controller
         //$id = User::find($id);
         // return view('item_scr', ['id' => $id]);
         //新しい記述ここまで
+        $id = Auth::id();
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         return view('index', ['item' => $items]);
     }
