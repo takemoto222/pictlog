@@ -42,6 +42,7 @@ class UserController extends Controller
     public function mypage_edit($id)
     {
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
+        $id = Auth::id();
         return view('mypage_edit', ['item' => $items]);
     }
     public function edit_update(Request $request)

@@ -32,9 +32,10 @@
               </a>
             </li>
 
+
             <!--マイページ編集リンク-->
             <li class="nav_item">
-              <a href="{{route('mypage_edit', ['id' => $id->id])}}" class="nav_item_a">
+              <a href="{{ route('mypage_edit', ['id' => $item->id ]) }}" class="nav_item_a">
                 <img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img">
               </a>
             </li>
