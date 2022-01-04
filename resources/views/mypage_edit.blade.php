@@ -40,7 +40,8 @@
 
             <img id="preview1" class="edit_img">
             <input type="hidden" name="id" value="{{$item->id}}">
-            <input type="file" name="image" id="myImage1" accept="image/*">
+            <input type="file" name="image" id="myImage1
+" accept="image/*">
           </div>
           <!--画像ここまで-->
           <!--以下名前とプロフィール更新-->

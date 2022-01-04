@@ -45,6 +45,7 @@ class UserController extends Controller
         $id = Auth::id();
         return view('mypage_edit', ['item' => $items]);
     }
+
     public function edit_update(Request $request)
     {
         $form = $request->all('name', 'profile', 'image'); //nameをデータベースから全て取り出す formに渡す
