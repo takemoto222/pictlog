@@ -34,14 +34,13 @@
               @isset($item->image)
               <img src="/storage/{{$item->image}}" name="image" class="my_img">
               @else
-              <img src="{{ asset('pictlog/img/noimage.png') }}" class="my_img">
+              <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="my_img">
               @endisset
             </div>
 
             <img id="preview1" class="edit_img">
             <input type="hidden" name="id" value="{{$item->id}}">
-            <input type="file" name="image" id="myImage1
-" accept="image/*">
+            <input type="file" name="image" id="myImage1" accept="image/*">
           </div>
           <!--画像ここまで-->
           <!--以下名前とプロフィール更新-->
@@ -69,7 +68,7 @@
     </form>
     <!--更新させたい　ここまで-->
     </div>
-    <script src="{{ asset('pictlog/js/mypage.edit.js') }}"></script>
+    <script src="{{ asset('pictlog/js/mypage.js') }}"></script>
     </div>
 
 
