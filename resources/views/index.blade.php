@@ -58,7 +58,7 @@
               <!--画像-->
               <div class="topimg_box">
                 @isset($item->image)
-                <img src="{{Storage::url($item->image)}}" name="id" value="{{$item->image}}" alt="画像" class="top_my_img">
+                <img src="http://127.0.0.1:8001/storage/images/{{($item->image)}}" name="image" value="{{$items->image}}" name="image" alt="画像" class="top_my_img">
                 @else
                 <img src="{{ asset('pictlog/img/noimage.png') }}" class="top_my_img">
                 @endisset
