@@ -32,11 +32,16 @@
               </a>
             </li>
 
-
             <!--マイページ編集リンク-->
             <li class="nav_item">
               <a href="{{ route('mypage_edit', ['id' => $item->id ]) }}" class="nav_item_a">
                 <img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img">
+              </a>
+            </li>
+            <!--投稿画面リンク-->
+            <li class="nav_item">
+              <a href="/item_add" class="nav_item_a">
+                <img src="{{ asset('pictlog/img/camera_icon2.png') }}" class="header_icon_img">
               </a>
             </li>
             <!--お問い合わせ-->
@@ -58,7 +63,7 @@
               <!--画像-->
               <div class="topimg_box">
                 @isset($item->image)
-                <img src="http://127.0.0.1:8001/storage/images/{{($item->image)}}" name="image" value="{{$items->image}}" name="image" alt="画像" class="top_my_img">
+                <img src="{{ asset('storage/image/' . $item->image) }}" name="image" value="{{$item->image}}" name="image" alt="画像" class="top_my_img">
                 @else
                 <img src="{{ asset('pictlog/img/noimage.png') }}" class="top_my_img">
                 @endisset
@@ -132,42 +137,12 @@
                   <!--以下複製-->
                   <div class="content1_box">
                     <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
+                      <a href="item.html"><img src="{{ asset('pictlog/img/susi_1125_2.jpg') }}" class="content1_img"></a>
                     </div>
                   </div>
                   <div class="content1_box">
                     <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
+                      <a href="item.html"><img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="content1_img"></a>
                     </div>
                   </div>
                   <!--上複製-->

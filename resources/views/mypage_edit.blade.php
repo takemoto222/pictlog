@@ -4,6 +4,8 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="{{ asset('pictlog/css/mypage.edit.css')  }}">
     <link rel="stylesheet" href="{{ ('css/reset.css') }}">
     <!--タイトルフォント-->
@@ -38,11 +40,16 @@
               @endisset
             </div>
 
-            <img id="preview1" class="edit_img">
+
+            <img id="preview" class="edit_img">
             <input type="hidden" name="id" value="{{$item->id}}">
-            <input type="file" name="image" id="myImage1" accept="image/*">
+            <input type="file" id="myImage" name="image" accept="image/*">
           </div>
+          <!--プレビューのjs-->
+          <script src="{{ asset('pictlog/js/mypage.img.js') }}"></script>
           <!--画像ここまで-->
+
+
           <!--以下名前とプロフィール更新-->
           <!--どのユーザーが更新するのかid特定-->
           <input type="hidden" name="id" value="{{$item->id}}">
@@ -68,7 +75,7 @@
     </form>
     <!--更新させたい　ここまで-->
     </div>
-    <script src="{{ asset('pictlog/js/mypage.js') }}"></script>
+
     </div>
 
 

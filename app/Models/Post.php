@@ -7,7 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['content', 'user_id'];
+    protected $fillable = [
+        'content',
+        'user_id'
+    ];
 
     protected $guarded = array('id');
     public static $rules = array(
