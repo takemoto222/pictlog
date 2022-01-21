@@ -14,7 +14,6 @@ class PostController extends Controller
     {
         //$items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
         $photos = DB::select('select * from posts');
-        $photos = DB::select('select * from users');
         //dd($photos); //dd()関数は変数の中身を表示してくれる関数で、この時点で処理は停止
         return view('item_scr', ['photos' => $photos]);
     }
@@ -76,7 +75,7 @@ class PostController extends Controller
         $image5 = $image5_file;
         //5枚目追加ここまで
         $param = [
-            'user_id' => $request->user_id,
+            'user_id' => Auth::id(),
             'name' => $request->name,
             'content' => $request->content,
             'image' => $image,
