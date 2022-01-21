@@ -88,11 +88,11 @@
 
               <!--どのユーザーが更新するのかid特定-->
               <input type="hidden" name="id" value="{{$item->id}}">
-              <input type="text" name="name" value="{{$item->name}}" class="name_area">
+              <p name="name" class="name_area">{{$item->name}} </p>
               <!--どのユーザーが更新するのかid特定-->
               <input type="hidden" name="id" value="{{$item->id}}">
               <!--自己紹介文記入-->
-              <textarea name="profile" rows="6" cols="60%" placeholder="自己紹介" class="textarea">{{$item->profile}}</textarea>
+              <p name="profile" class="textarea">{{$item->profile}}</p>
           </div>
           </form>
           <!--更新させたいここまで-->

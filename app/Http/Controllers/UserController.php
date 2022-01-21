@@ -15,13 +15,15 @@ class UserController extends Controller
     //練習
     public function index($id)
     {
-        //リレーション 投稿
-        $items = Post::where('user_id', $id)->get();
-        //リレーション 投稿ここまで
         $id = Auth::id();
-        $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
+        //リレーション 投稿記述
+        $items = Post::where('user_id', $id)->get();
+
+        $items = User::find($id)->posts; //テストからIDを取得、idを特定 $itemsに渡す
         return view('index', ['item' => $items]);
     }
+
+
     public function create(Request $request)
     {
         $form = $request->all('name', 'profile', 'image');

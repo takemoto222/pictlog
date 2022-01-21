@@ -38,12 +38,14 @@
           <li class="nav_item"><a href="/contact" class="nav_item_a"><img src="{{ asset('pictlog/img/iconmall3.png') }}" class="header_icon_img"></a></li>
 
           <!--ログアウト-->
-          <form method="POST" action="{{ route('logout') }}" nav_item>
-            @csrf
-            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-              {{ __('Log Out') }}
-            </button>
-          </form>
+          <li class="nav_item">
+            <form method="POST" action="{{ route('logout') }}" nav_item>
+              @csrf
+              <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
+                <img src="{{ asset('pictlog/img/icon_login.png') }}" class="header_icon_img">
+              </button>
+            </form>
+          </li>
         </ul>
       </nav>
       <!--ナビバーここまで-->
