@@ -23,4 +23,8 @@ class Post extends Model
         $txt = 'ID:' . $this->id . ' ' . $this->content . $this->image;
         return $txt;
     }
+    public function user()
+    {
+        return $this->belongsTo('App/Models/User');
+    }
 }
