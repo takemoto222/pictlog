@@ -18,8 +18,7 @@ class UserController extends Controller
         $id = Auth::id();
         //リレーション 投稿記述
         $items = Post::where('user_id', $id)->get();
-
-        $items = User::find($id)->posts; //テストからIDを取得、idを特定 $itemsに渡す
+        $items = User::find($id)->posts(); //テストからIDを取得、idを特定 $itemsに渡す
         return view('index', ['item' => $items]);
     }
 
