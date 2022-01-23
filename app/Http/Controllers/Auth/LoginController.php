@@ -26,6 +26,7 @@ class LoginController extends Controller
      *
      * @var string
      */
+    /*ログイン後のページ*/
     protected $redirectTo = '/top';
 
     /**
@@ -36,5 +37,11 @@ class LoginController extends Controller
     public function __construct()
     {
         return view('/logout_top');
+    }
+
+    /*ログアウト後のページ*/
+    protected function loggedOut()
+    {
+        return redirect('/logout_top');
     }
 }
