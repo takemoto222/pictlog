@@ -134,12 +134,6 @@
             </li>
 
             <li class="massage_icon_li">
-              <!--userテーブルからここにユーザー名を表示させる-->
-
-              {{$photo->name}}
-            </li>
-
-            <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/like128.png') }}" class="massage_icon">
             </li>
             <li class="massage_icon_li">

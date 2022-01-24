@@ -15,18 +15,19 @@ class UserController extends Controller
     //練習
     public function index($id)
     {
-        //$id = Auth::id();
-        // リレーション 投稿記述
-        // $items = Post::where('user_id', $id)->get();
-        // $items = User::find($id)->posts(); //テストからIDを取得、idを特定 $itemsに渡す
-        //$item = User::find($id);
-        $id = Auth::id(); // ログインしているユーザーのID;
-        // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
-        $item = User::find($id)->with('posts')->get();
-        // 画面に表示されます
-        return view('index', ['item' => $item]);
+        $id = Auth::id();
+        //リレーション 投稿記述
+        $items = Post::where('user_id', $id)->get();
+        //$items = User::find($id)->posts(); //テストからIDを取得、idを特定 $itemsに渡す
+        $item = User::find($id)->with('posts')->first();
+        //return view('index', ['item' => $items]);
+        return view('index', ['item' => $items[0]]);
     }
 
+    //$id = Auth::id(); // ログインしているユーザーのID;
+    // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
+    //$item = User::find($id)->with('posts')->get();
+    // return $item;
 
     public function create(Request $request)
     {

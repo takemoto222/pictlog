@@ -16,11 +16,17 @@ Route::get('/logout_top', [TopController::class, 'logout_top']);
 //トップページ
 Route::get('/top', [TopController::class, 'top'])->name('top');
 
-//アイテムページ
-Route::get('/item_scr', [PostController::class, 'item_scr'])->name('item_scr');
-//create
-Route::get('/item_add', [PostController::class, 'item_add'])->name('item_add');
-Route::post('/item_add', [PostController::class, 'item_create'])->name('item_create');
+//投稿ページ
+
+Route::group(
+  ['middleware' => 'auth'],
+  function () {
+    Route::get('/item_scr', [PostController::class, 'item_scr'])->name('item_scr');
+    //create
+    Route::get('/item_add', [PostController::class, 'item_add'])->name('item_add');
+    Route::post('/item_add', [PostController::class, 'item_create'])->name('item_create');
+  }
+);
 
 
 
@@ -35,8 +41,13 @@ Route::get('/update/{id}', [UserController::class, 'update']);
 
 //後
 //マイページ編集
-Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit'])->name('mypage_edit');
-Route::post('/edit_update/{id}', [UserController::class, 'edit_update'])->name('edit_update');
+Route::group(
+  ['middleware' => 'auth'],
+  function () {
+    Route::get('/mypage_edit/{id}', [UserController::class, 'mypage_edit'])->name('mypage_edit');
+    Route::post('/edit_update/{id}', [UserController::class, 'edit_update'])->name('edit_update');
+  }
+);
 //画像
 
 
