@@ -25,7 +25,7 @@ class UserController extends Controller
         // dd($items[0]['content']);
         //return view('index', ['item' => $items]);
         return view('index', [
-            'item' => $items[0],
+            'item' => $item,
             'post' => $items
         ]);
     }

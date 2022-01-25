@@ -32,8 +32,8 @@ class PostController extends Controller
     public function item_add()
     {
         $id = Auth::id();
-        $item = User::find($id);
-        return view('item_post', ['item' => $item]);
+        $id = User::find($id);
+        return view('item_post', ['id' => $id]);
         // $user = Auth::user(); //追加行
         //return $user; //追加行
     }
