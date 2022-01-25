@@ -132,8 +132,7 @@
                   <!--投稿した画像-->
                   @for($i = 0; $i < count($post); $i++) <div class="content1_box">
                     <div class="content1_img_area">
-
-                      <a href="{{ route('item_scr', ['id'=>$item['id']]) }}"><img src="/storage/image/{{$item['image']}}" class="content1_img"></a>
+                      <a href="{{ route('item_scr', ['id'=>$post[$i]['id']]) }}"><img src="/storage/image/{{$post[$i]['image']}}" class="content1_img"></a>
                     </div>
                 </div>
                 @endfor

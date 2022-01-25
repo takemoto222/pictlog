@@ -138,6 +138,13 @@
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/icon_coment.png') }}" class="massage_icon">
             </li>
+            <!--削除ボタン-->
+            <li class="massage_icon_li">
+              <form action="{{ route('item_scr.delete', ['id' => $photo->id]) }}" method="post">
+                @csrf
+                <button class="delete_button">削除</button>
+              </form>
+            </li>
           </ul>
         </div>
 

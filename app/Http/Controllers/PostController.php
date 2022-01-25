@@ -116,4 +116,14 @@ class PostController extends Controller
         $image4->save(); //追加4
         $image5->save(); //追加5
     }
+
+
+    //削除ボタン
+    // こちらは削除を行うアクションメソッドです
+    public function delete(Request $request)
+    {
+        // リクエストで送られてきたTodoのidを使い、テーブル側のどのTodoがリクエストのPostなのかを探してdeleteメソッドで削除しています
+        Post::find($request->id)->delete();
+        return redirect('/{id}');
+    }
 }

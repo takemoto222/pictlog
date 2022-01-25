@@ -25,6 +25,8 @@ Route::group(
     //create
     Route::get('/item_add', [PostController::class, 'item_add'])->name('item_add');
     Route::post('/item_add', [PostController::class, 'item_create'])->name('item_create');
+    //削除
+    Route::post('/item_scr/delete', [PostController::class, 'delete'])->name('item_scr.delete');
   }
 );
 
