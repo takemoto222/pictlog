@@ -43,7 +43,7 @@
     </header>
 
 
-    @foreach($photos as $photo)
+
     <!--全体の箱-->
     <div class="inner-box">
       <!--投稿された画像-->
@@ -68,9 +68,7 @@
                 <ul>
                   @isset($photo->image)
                   <li><img src="storage/image/{{($photo->image)}}" value="{{$photo->name}}" name="image" alt="画像" class="slide_img_first" multiple /></li>
-
                   <li><img src="storage/image/{{($photo->image2)}}" value="{{$photo->name}}" name="image2" alt="画像" class="slide_img_list" multiple /></li>
-
                   <li><img src="storage/image/{{($photo->image3)}}" value="{{$photo->name}}" name="image3" alt="画像" multiple /></li>
                   <li><img src="storage/image/{{($photo->image4)}}" value="{{$photo->name}}" name="image4" alt="画像" multiple /></li>
                   <li><img src="storage/image/{{($photo->image5)}}" value="{{$photo->name}}" name="image5" alt="画像" multiple /></li>
@@ -145,7 +143,7 @@
         <!--コメントエリア-->
         <div class="comment_area"></div>
       </div>
-      @endforeach
+
       <!--savascript-->
       <script src="{{ asset('pictlog/js/item.js') }}"></script>
 

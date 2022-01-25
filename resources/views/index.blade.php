@@ -129,22 +129,21 @@
                 <p class="my_postlist">投稿</p>
                 <div class="content1_inenr">
                   <!--一区切り-->
+                  <!--投稿した画像-->
+                  @foreach($item->posts as $post)
+                  <div class="content1_box">
+                    <div class="content1_img_area">
+                      <a href="{{ route('item_scr', ['id'=>$post->id]) }}"><img src="/storage/image/{{$post->image}}" class="content1_img"></a>
+                    </div>
+                  </div>
+                  @endforeach
+                  <!--投稿した画像直張-->
                   <div class="content1_box">
                     <div class="content1_img_area">
                       <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
                     </div>
                   </div>
                   <!--以下複製-->
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/susi_1125_2.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="item.html"><img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
                   <!--上複製-->
                 </div>
               </div>

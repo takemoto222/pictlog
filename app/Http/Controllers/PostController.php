@@ -10,12 +10,23 @@ use App\Models\User;
 
 class PostController extends Controller
 {
-    public function item_scr()
+    public function item_scr(Request $request)
     {
+        //1ページに1投稿まで　の記述
+        $id = $request->id;
+        $photos = DB::table('posts')->latest()->get();
+        if (empty($id)) {
+            $photo = $photos[0];
+        } else {
+            $photo = $photos->where('id', $id)->first();
+        }
+        return view('item_scr', ['photo' => $photo]);
+
+        //リレーション直後の記述
         //$items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
-        $photos = DB::select('select * from posts');
+        // $photos = DB::select('select * from posts');
         //dd($photos); //dd()関数は変数の中身を表示してくれる関数で、この時点で処理は停止
-        return view('item_scr', ['photos' => $photos]);
+        // return view('item_scr', ['photos' => $photos]);
     }
 
     public function item_add()
@@ -26,17 +37,11 @@ class PostController extends Controller
         // $user = Auth::user(); //追加行
         //return $user; //追加行
     }
-    // public function item_create(Request $request)
-    // {
-    //  $request->all();
-    //  $param = [
-    //   'name' => $request->name,
-    // 'content' => $request->content,
-    // 'image' => $request->image,
-    //  ];
-    // DB::insert('insert into posts(name, content,//image) values(:name, :content, :image)', $param);
-    // return redirect('/item_scr');
-    //}
+
+
+
+
+
     public function item_create(Request $request)
     {
         $request->all();
