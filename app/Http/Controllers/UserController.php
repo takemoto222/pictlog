@@ -22,10 +22,11 @@ class UserController extends Controller
         $item = User::find($id)->with('posts')->first();
 
         //dd()で$itemの中身を確認
-        dd($item[0]['content']);
+        // dd($items[0]['content']);
         //return view('index', ['item' => $items]);
         return view('index', [
-            'item' => $items[0]
+            'item' => $items[0],
+            'post' => $items
         ]);
     }
 

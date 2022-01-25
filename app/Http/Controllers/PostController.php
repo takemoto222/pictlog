@@ -12,7 +12,7 @@ class PostController extends Controller
 {
     public function item_scr(Request $request)
     {
-        //1ページに1投稿まで　の記述
+        //1ページに1投稿まで の記述
         $id = $request->id;
         $photos = DB::table('posts')->latest()->get();
         if (empty($id)) {

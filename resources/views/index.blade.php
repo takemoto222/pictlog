@@ -130,70 +130,70 @@
                 <div class="content1_inenr">
                   <!--一区切り-->
                   <!--投稿した画像-->
-
-                  <div class="content1_box">
+                  @for($i = 0; $i < count($post); $i++) <div class="content1_box">
                     <div class="content1_img_area">
+
                       <a href="{{ route('item_scr', ['id'=>$item['id']]) }}"><img src="/storage/image/{{$item['image']}}" class="content1_img"></a>
                     </div>
-                  </div>
-
-                  <!--投稿した画像直張-->
-                  <!--直張をコメントアウトしています
+                </div>
+                @endfor
+                <!--投稿した画像直張-->
+                <!--直張をコメントアウトしています
                     <div class="content1_box">
                     <div class="content1_img_area">
                       <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
                     </div>
                   </div>  直張をコメントアウトしています -->
-                  <!--以下複製-->
-                  <!--上複製-->
-                </div>
-              </div>
-              <!--コンテンツ内2-->
-              <div class="tab-content__item">
-                <p class="my_likelist">いいねした投稿</p>
-                <!--コンテンツ1コピー-->
-                <div class="content1_inenr">
-                  <!--一区切り-->
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <!--以下複製-->
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa2.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa1.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <div class="content1_box">
-                    <div class="content1_img_area">
-                      <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="content1_img"></a>
-                    </div>
-                  </div>
-                  <!--上複製-->
-                </div>
-                <!--コンテンツ１コピー-->
-              </div>
-              <!--コンテンツ内3-->
-              <div class="tab-content__item">
-                <p class="my_seting">設定</p>
+                <!--以下複製-->
+                <!--上複製-->
               </div>
             </div>
+            <!--コンテンツ内2-->
+            <div class="tab-content__item">
+              <p class="my_likelist">いいねした投稿</p>
+              <!--コンテンツ1コピー-->
+              <div class="content1_inenr">
+                <!--一区切り-->
+                <div class="content1_box">
+                  <div class="content1_img_area">
+                    <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="content1_img"></a>
+                  </div>
+                </div>
+                <!--以下複製-->
+                <div class="content1_box">
+                  <div class="content1_img_area">
+                    <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa2.jpg') }}" class="content1_img"></a>
+                  </div>
+                </div>
+                <div class="content1_box">
+                  <div class="content1_img_area">
+                    <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa1.jpg') }}" class="content1_img"></a>
+                  </div>
+                </div>
+                <div class="content1_box">
+                  <div class="content1_img_area">
+                    <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="content1_img"></a>
+                  </div>
+                </div>
+                <div class="content1_box">
+                  <div class="content1_img_area">
+                    <a href="posted.photo.html"><img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="content1_img"></a>
+                  </div>
+                </div>
+                <!--上複製-->
+              </div>
+              <!--コンテンツ１コピー-->
+            </div>
+            <!--コンテンツ内3-->
+            <div class="tab-content__item">
+              <p class="my_seting">設定</p>
+            </div>
           </div>
-          <!--タブここまで-->
         </div>
+        <!--タブここまで-->
+    </div>
 
-      </main>
+    </main>
     </div>
 
     <script src="{{ asset('pictlog/js/main.js') }}"></script>

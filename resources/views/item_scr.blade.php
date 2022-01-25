@@ -131,6 +131,7 @@
               <!--userテーブルからここにユーザーアイコンを表示させる-->
             </li>
 
+
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/like128.png') }}" class="massage_icon">
             </li>
