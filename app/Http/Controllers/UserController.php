@@ -20,8 +20,13 @@ class UserController extends Controller
         $items = Post::where('user_id', $id)->get();
         //$items = User::find($id)->posts(); //テストからIDを取得、idを特定 $itemsに渡す
         $item = User::find($id)->with('posts')->first();
+
+        //dd()で$itemの中身を確認
+        dd($item[0]['content']);
         //return view('index', ['item' => $items]);
-        return view('index', ['item' => $items[0]]);
+        return view('index', [
+            'item' => $items[0]
+        ]);
     }
 
     //$id = Auth::id(); // ログインしているユーザーのID;

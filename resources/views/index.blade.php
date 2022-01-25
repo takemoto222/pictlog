@@ -130,19 +130,20 @@
                 <div class="content1_inenr">
                   <!--一区切り-->
                   <!--投稿した画像-->
-                  @foreach($item->posts as $post)
+
                   <div class="content1_box">
                     <div class="content1_img_area">
-                      <a href="{{ route('item_scr', ['id'=>$post->id]) }}"><img src="/storage/image/{{$post->image}}" class="content1_img"></a>
+                      <a href="{{ route('item_scr', ['id'=>$item['id']]) }}"><img src="/storage/image/{{$item['image']}}" class="content1_img"></a>
                     </div>
                   </div>
-                  @endforeach
+
                   <!--投稿した画像直張-->
-                  <div class="content1_box">
+                  <!--直張をコメントアウトしています
+                    <div class="content1_box">
                     <div class="content1_img_area">
                       <a href="item.html"><img src="{{ asset('pictlog/img/food_1125.jpg') }}" class="content1_img"></a>
                     </div>
-                  </div>
+                  </div>  直張をコメントアウトしています -->
                   <!--以下複製-->
                   <!--上複製-->
                 </div>
