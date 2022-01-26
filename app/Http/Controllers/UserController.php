@@ -75,8 +75,8 @@ class UserController extends Controller
             'image' => $path //imageには先ほど加工した画像ファイルの値
         ]); // 値の更新
 
-        $item = User::where('id', $request->id)->first();
-        return view("index", ["item" => $item]); // ユーザ情報の返却
+        $post = User::where('id', $request->id)->first();
+        return view("index", ["item" => $post]); // ユーザ情報の返却
     }
 
     /*画像関係*/
