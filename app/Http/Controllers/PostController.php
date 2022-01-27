@@ -15,7 +15,7 @@ class PostController extends Controller
         //1ページに1投稿まで の記述
         $id = $request->id;
         //リレーションのため追加
-
+        $item = DB::table('users')->where('id', 'name')->get(); //userの情報をitemに
         //
         $photos = DB::table('posts')->latest()->get();
         if (empty($id)) {
@@ -27,7 +27,8 @@ class PostController extends Controller
         //dd();
         // return view('item_scr', ['photo' => $photo] ,['id' => $id]);
         return view('item_scr', [
-            'photo' => $photo
+            'photo' => $photo,
+            'item' => $item //userの情報を渡す
         ]);
 
         //リレーション直後の記述

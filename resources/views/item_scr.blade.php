@@ -133,6 +133,7 @@
             <!--ユーザーアイコン-->
 
             <li class="massage_icon_li">
+              {{$item->name}}
 
             </li>
 
