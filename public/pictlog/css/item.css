@@ -243,6 +243,7 @@
 .massage_icon {
     width: 25px;
     height: 25px;
+    border-radius: 50%;
 }
 
 /*削除ボタン*/
@@ -266,4 +267,10 @@
 .delete_button:hover {
     background-color: #b3afaf;
     border: 1px solid #b3afaf;
+}
+
+/**/
+.user_name {
+    font-size: 10px;
+    display: flex;
 }

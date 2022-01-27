@@ -131,10 +131,12 @@
           <ul class="icon_area_list">
 
             <!--ユーザーアイコン-->
+            <li class="massage_icon_li">
+              <img src="{{ asset('pictlog/img/kawa2.jpg') }}" class="massage_icon">
+            </li>
 
             <li class="massage_icon_li">
-              {{$item->name}}
-
+              <p class="user_name">{{ $item->name }}</p>
             </li>
 
             <!--いいね-->

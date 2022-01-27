@@ -10,13 +10,16 @@ use App\Models\User;
 
 class PostController extends Controller
 {
-    public function item_scr(Request $request)
+    public function item_scr()
     {
-        //1ページに1投稿まで の記述
-        $id = $request->id;
+
         //リレーションのため追加
-        $item = DB::table('users')->where('id', 'name')->get(); //userの情報をitemに
+        $id = Auth::user();
+        $item = DB::table('users')->where('name', $id->name)->first();
+        //userの情報をitemに
         //
+        dd($id);
+        //1ページに1投稿まで の記述
         $photos = DB::table('posts')->latest()->get();
         if (empty($id)) {
             $photo = $photos[0];
@@ -24,18 +27,13 @@ class PostController extends Controller
             $photo = $photos->where('id', $id)->first();
         }
 
-        //dd();
+
+
         // return view('item_scr', ['photo' => $photo] ,['id' => $id]);
         return view('item_scr', [
             'photo' => $photo,
             'item' => $item //userの情報を渡す
         ]);
-
-        //リレーション直後の記述
-        //$items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
-        // $photos = DB::select('select * from posts');
-        //dd($photos); //dd()関数は変数の中身を表示してくれる関数で、この時点で処理は停止
-        // return view('item_scr', ['photos' => $photos]);
     }
 
     public function item_add()
