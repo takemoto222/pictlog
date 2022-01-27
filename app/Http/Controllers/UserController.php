@@ -18,12 +18,13 @@ class UserController extends Controller
         $id = Auth::id();
         //リレーション 投稿記述
         $items = Post::where('user_id', $id)->get();
-        //$items = User::find($id)->posts(); //テストからIDを取得、idを特定 $itemsに渡す
+        // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
         $item = User::find($id)->with('posts')->first();
 
         //dd()で$itemの中身を確認
         // dd($items[0]['content']);
-        //return view('index', ['item' => $items]);
+
+        // 画面に表示されます
         return view('index', [
             'item' => $item,
             'post' => $items
@@ -75,8 +76,14 @@ class UserController extends Controller
             'image' => $path //imageには先ほど加工した画像ファイルの値
         ]); // 値の更新
 
-        $post = User::where('id', $request->id)->first();
-        return view("index", ["item" => $post]); // ユーザ情報の返却
+        // $post = User::where('id', $request->id)->first();
+        //return view("index", ["item" => $post]); // ユーザ情報の返却
+        $items = Post::where('user_id', $request->id)->get();
+        $item = User::find($request->id)->with('posts')->first();
+        return view('index', [
+            'item' => $item,
+            'post' => $items
+        ]);
     }
 
     /*画像関係*/

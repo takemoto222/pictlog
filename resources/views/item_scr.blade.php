@@ -33,10 +33,12 @@
       <!--ナビバー-->
       <nav class="nav">
         <ul class="nav_list">
+          <!--topへのリンク-->
           <li class="nav_item"><a href="/top" class="nav_item_a"><img src="{{ asset('pictlog/img/iconhome2.png')}}" class="header_icon_img"></a></li>
-          <li class="nav_item"><a href="/" class="nav_item_a"><img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img"></a></li>
-          <li class="nav_item"><a href="/mypage_edit/{id}" class="nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
-          <li class="nav_item"><a href="/contact" class="nav_item_a"><img src="{{ asset('pictlog/img/iconmall3.png') }}" class="header_icon_img"></a></li>
+          <!--マイページへのリンク-->
+          <li class="nav_item"> <a href="/{$id}" class=" nav_item_a">
+              <img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img">
+            </a></li>
         </ul>
       </nav>
       <!--ナビバーここまで-->

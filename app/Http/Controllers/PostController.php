@@ -14,12 +14,15 @@ class PostController extends Controller
     {
         //1ページに1投稿まで の記述
         $id = $request->id;
+        //$id = Auth::id();
+        // $id = User::find($id);
         $photos = DB::table('posts')->latest()->get();
         if (empty($id)) {
             $photo = $photos[0];
         } else {
             $photo = $photos->where('id', $id)->first();
         }
+        // return view('item_scr', ['photo' => $photo] ,['id' => $id]);
         return view('item_scr', ['photo' => $photo]);
 
         //リレーション直後の記述
