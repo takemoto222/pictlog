@@ -126,23 +126,27 @@
       <!---->
       <!--いいね、コメントエリア箱-->
       <div class="message_area">
-        <!--いいね、コメントアイコン-->
+        <!--ユーザー情報、いいね、コメントアイコン-->
         <div class="icon_area">
           <ul class="icon_area_list">
+
+            <!--ユーザーアイコン-->
+
             <li class="massage_icon_li">
-              <!--userテーブルからここにユーザーアイコンを表示させる-->
+
             </li>
 
-
+            <!--いいね-->
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/like128.png') }}" class="massage_icon">
             </li>
+            <!--コメント-->
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/icon_coment.png') }}" class="massage_icon">
             </li>
             <!--削除ボタン-->
             <li class="massage_icon_li">
-              <form action="{{ route('item_scr.delete', ['id' => $photo->id]) }}" method="post">
+              <form action="{{ route('item_scr.delete', ['id' => $photo->id]) }}" method="post" class="form_delete_icon">
                 @csrf
                 <button class="delete_button">削除</button>
               </form>

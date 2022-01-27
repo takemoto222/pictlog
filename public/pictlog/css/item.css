@@ -245,6 +245,12 @@
     height: 25px;
 }
 
+/*削除ボタン*/
+
+.form_delete_icon {
+    margin: 0px 0px 0px 500px;
+}
+
 .delete_button {
     display: block;
     width: 50px;

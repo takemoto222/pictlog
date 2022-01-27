@@ -20,10 +20,8 @@ class UserController extends Controller
         $items = Post::where('user_id', $id)->get();
         // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
         $item = User::find($id)->with('posts')->first();
-
         //dd()で$itemの中身を確認
         // dd($items[0]['content']);
-
         // 画面に表示されます
         return view('index', [
             'item' => $item,
@@ -78,8 +76,8 @@ class UserController extends Controller
 
         // $post = User::where('id', $request->id)->first();
         //return view("index", ["item" => $post]); // ユーザ情報の返却
-        $items = Post::where('user_id', $request->id)->get();
-        $item = User::find($request->id)->with('posts')->first();
+        $items = Post::where('user_id', $request->id)->get(); //リクエストの情報に含まれるidを持つUserが投稿したPostだけを取り出しています。
+        $item = User::find($request->id)->with('posts')->first(); //リクエストの情報に含まれるidを持つUserを取得し、取り出した情報は配列になっているのですが、このUserの配列の中に、userが投稿した情報も含まれています。
         return view('index', [
             'item' => $item,
             'post' => $items
