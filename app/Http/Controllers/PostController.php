@@ -10,15 +10,16 @@ use App\Models\User;
 
 class PostController extends Controller
 {
-    public function item_scr()
+    public function item_scr(Request $request)
     {
 
         //リレーションのため追加
-        $id = Auth::user();
+        $id = $request->id;
+        $item = Auth::id();
         $item = DB::table('users')->where('name', $id->name)->first();
-        //userの情報をitemに
-        //
-        //dd($id);
+
+
+        //dd($item);
         //1ページに1投稿まで の記述
         $photos = DB::table('posts')->latest()->get();
         if (empty($id)) {
@@ -28,13 +29,13 @@ class PostController extends Controller
         }
 
 
-
-        // return view('item_scr', ['photo' => $photo] ,['id' => $id]);
         return view('item_scr', [
             'photo' => $photo,
-            'item' => $item, //
-            'user' => $item  //userの情報をbladeに渡す
+            'photo' => $photos,
+            'item' => $item, //userの情報をbladeに渡す
         ]);
+        //compact関数を使った例 エラー
+        //return view('item_scr', compact('id', 'item', 'photos'));
     }
 
     public function item_add()
@@ -106,17 +107,17 @@ class PostController extends Controller
     {
         $image = $request->image;
         $image2 = $request->image2; //追加2枚目
-        $image3 = $request->image2; //追加3
-        $image4 = $request->image2; //追加4
-        $image5 = $request->image2; //追加5
+        $image3 = $request->image3; //追加3
+        $image4 = $request->image4; //追加4
+        $image5 = $request->image5; //追加5
         $image = $request->file('image', 'image2')->store('public/image'); //追加
         $image = str_replace('public/image/', '', $image);
         $image = new Post;
         $image->file = $image;
         $image2->file = $image2; //追加2枚目
-        $image3->file = $image2; //追加3
-        $image4->file = $image2; //追加4
-        $image5->file = $image2; //追加5
+        $image3->file = $image3; //追加3
+        $image4->file = $image4; //追加4
+        $image5->file = $image5; //追加5
 
         $image->save();
         $image2->save(); //追加2

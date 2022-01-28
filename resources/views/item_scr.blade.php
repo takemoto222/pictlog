@@ -136,7 +136,7 @@
             </li>
 
             <li class="massage_icon_li">
-              <p class="user_name">{{ $item->name }}</p>
+              <p class="user_name"></p>
             </li>
 
             <!--いいね-->
