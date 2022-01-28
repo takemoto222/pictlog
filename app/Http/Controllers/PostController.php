@@ -18,7 +18,7 @@ class PostController extends Controller
         $item = DB::table('users')->where('name', $id->name)->first();
         //userの情報をitemに
         //
-        dd($id);
+        //dd($id);
         //1ページに1投稿まで の記述
         $photos = DB::table('posts')->latest()->get();
         if (empty($id)) {
@@ -32,7 +32,8 @@ class PostController extends Controller
         // return view('item_scr', ['photo' => $photo] ,['id' => $id]);
         return view('item_scr', [
             'photo' => $photo,
-            'item' => $item //userの情報を渡す
+            'item' => $item, //
+            'user' => $item  //userの情報をbladeに渡す
         ]);
     }
 
