@@ -14,10 +14,9 @@ class PostController extends Controller
     {
 
         //リレーションのため追加
-        $id = $request->id;
-        $item = Auth::id();
-        $item = DB::table('users')->where('name', $id->name)->first();
-
+        $user = Auth::id();
+        $id = $request->User::all();
+        $item = DB::table('users')->where('name', $user->name)->first();
 
         //dd($item);
         //1ページに1投稿まで の記述
@@ -33,6 +32,7 @@ class PostController extends Controller
             'photo' => $photo,
             'photo' => $photos,
             'item' => $item, //userの情報をbladeに渡す
+            'id' => $user
         ]);
         //compact関数を使った例 エラー
         //return view('item_scr', compact('id', 'item', 'photos'));
