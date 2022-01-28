@@ -14,8 +14,8 @@ class PostController extends Controller
     {
 
         //リレーションのため追加
-        $user = Auth::id();
-        $id = $request->User::all();
+        $user = Auth::user();
+        $id = $request->all();
         $item = DB::table('users')->where('name', $user->name)->first();
 
         //dd($item);
@@ -113,6 +113,7 @@ class PostController extends Controller
         $image = $request->file('image', 'image2')->store('public/image'); //追加
         $image = str_replace('public/image/', '', $image);
         $image = new Post;
+        dd(image);
         $image->file = $image;
         $image2->file = $image2; //追加2枚目
         $image3->file = $image3; //追加3
