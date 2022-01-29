@@ -116,7 +116,8 @@
 
         <form action="/item_add" method="get">
           @csrf
-          <textarea name="content" rows="20" cols="100%" placeholder="記事の内容" class="textarea">{{$photo->content}}</textarea>
+          <textarea name="content" rows="15" cols="100%" placeholder="記事の内容" class="textarea">{{$photo->content}}</textarea>
+          <!--  <p class="textarea" name="contact</p>-->
         </form>
 
       </div>
@@ -125,24 +126,24 @@
       <!---->
       <!---->
       <!--いいね、コメントエリア箱-->
-      <div class="message_area">
+      <div class=" message_area">
         <!--ユーザー情報、いいね、コメントアイコン-->
         <div class="icon_area">
           <ul class="icon_area_list">
 
             <!--ユーザーアイコン-->
-            <li class="massage_icon_li">
+            <li class="massage_icon_li_img">
               @isset($id->image)
-              <img src="{{ asset('storage/image/' . $id->image) }}" name="image" value="{{$id->image}}" class="massage_icon_img">
+              <a href="/{$id}">
+                <img src="{{ asset('storage/image/' . $id->image) }}" name="image" value="{{$id->image}}" class="massage_icon_img"> </a>
               @else
               <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="massage_icon_img">
               @endisset
-            </li>
+           
 
             <li class="massage_icon_li">
               <p class="user_name">{{$id->name}}</p>
             </li>
-
             <!--いいね-->
             <li class="massage_icon_li">
               <img src="{{ asset('pictlog/img/like128.png') }}" class="massage_icon">

@@ -215,27 +215,30 @@
 /*テキストエリア本体*/
 .textarea {
     width: 100%;
-    border: 3px solid #eee;
+    border: 2px solid #eee;
 }
 
 /*いいね、コメントエリア箱*/
 .message_area {
     width: 900px;
+    height: 50px;
     border: 1px solid #eee;
     margin: 0 auto;
-    padding: 10px 0px;
 }
 /*いいね、コメントアイコン*/
-.icon_area_list {
-    display: flex;
-}
+
 .icon_area {
     width: 900px;
+}
+
+.icon_area_list {
+    display: flex;
 }
 
 .massage_icon_li {
     width: 25px;
     height: 25px;
+    line-height: center;
     list-style: none;
     margin-left: 5%;
 }
@@ -246,11 +249,30 @@
     margin-left: 30px;
 }
 
+/*ユーザーアイコン部分*/
+.massage_icon_li_img {
+    display: flex;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    margin: 0px 0px 20px 0px;
+}
+
 .massage_icon_img {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
+/*ユーザーアイコン部分*/
+.user_name {
+    font-size: 15px;
+    display: flex;
+    width: 150px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 /*削除ボタン*/
 
 .form_delete_icon {
@@ -260,6 +282,8 @@
 .delete_button {
     display: block;
     width: 50px;
+    font-size: 15px;
+    font-weight: bold;
     text-align: center;
     border: 1px solid #696969;
     border-radius: 10px;
@@ -272,14 +296,4 @@
 .delete_button:hover {
     background-color: #b3afaf;
     border: 1px solid #b3afaf;
-}
-
-/**/
-.user_name {
-    font-size: 10px;
-    display: flex;
-    width: 300px;
-    text-align: center;
-    font-size: 12px;
-    font-weight: bold;
 }

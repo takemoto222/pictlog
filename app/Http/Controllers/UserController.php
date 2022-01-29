@@ -19,7 +19,7 @@ class UserController extends Controller
         //リレーション 投稿記述
         $items = Post::where('user_id', $id)->get();
         // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
-        $item = User::find($id)->with('posts')->first();
+        $item = User::where('id', $id)->with('posts')->first();
         //dd()で$itemの中身を確認
         // dd($items[0]['content']);
         // 画面に表示されます
