@@ -17,7 +17,6 @@ class PostController extends Controller
         $user = Auth::user();
         $id = $request->all();
         $item = DB::table('users')->where('name', $user->name)->first();
-
         //dd($item);
         //1ページに1投稿まで の記述
         $photos = DB::table('posts')->latest()->get();
@@ -30,7 +29,7 @@ class PostController extends Controller
 
         return view('item_scr', [
             'photo' => $photo,
-            'photo' => $photos,
+            'photos' => $photos,
             'item' => $item, //userの情報をbladeに渡す
             'id' => $user
         ]);
@@ -113,7 +112,6 @@ class PostController extends Controller
         $image = $request->file('image', 'image2')->store('public/image'); //追加
         $image = str_replace('public/image/', '', $image);
         $image = new Post;
-        dd(image);
         $image->file = $image;
         $image2->file = $image2; //追加2枚目
         $image3->file = $image3; //追加3
