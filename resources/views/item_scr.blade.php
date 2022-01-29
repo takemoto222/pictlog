@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>商品画面</title>
+    <title>投稿した写真</title>
   </head>
 
   <body>
@@ -132,15 +132,15 @@
 
             <!--ユーザーアイコン-->
             <li class="massage_icon_li">
-              @isset($item->image)
-              <img src="/storage/{{$item->image}}" name="image" class="massage_icon_img">
+              @isset($id->image)
+              <img src="{{ asset('storage/image/' . $id->image) }}" name="image" value="{{$id->image}}" class="massage_icon_img">
               @else
-              <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="massage_icon_img">
+              <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="massage_icon_img">
               @endisset
             </li>
 
             <li class="massage_icon_li">
-              <p class="user_name">{{$item->name}}</p>
+              <p class="user_name">{{$id->name}}</p>
             </li>
 
             <!--いいね-->
