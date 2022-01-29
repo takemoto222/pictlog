@@ -132,11 +132,15 @@
 
             <!--ユーザーアイコン-->
             <li class="massage_icon_li">
-              <img src="{{ asset('pictlog/img/kawa2.jpg') }}" class="massage_icon">
+              @isset($item->image)
+              <img src="/storage/{{$item->image}}" name="image" class="massage_icon_img">
+              @else
+              <img src="{{ asset('pictlog/img/cafe_1125.jpg') }}" class="massage_icon_img">
+              @endisset
             </li>
 
             <li class="massage_icon_li">
-              <p class="user_name"></p>
+              <p class="user_name">{{$item->name}}</p>
             </li>
 
             <!--いいね-->
