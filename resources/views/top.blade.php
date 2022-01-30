@@ -75,8 +75,8 @@
 
           <!--ユーザーアイコン画像-->
           <div class="name_img_box">
-            @isset($item->image)
-            <img src="{{ asset('storage/image/' . $item->image) }}" name="image" value="{{$item->image}}" class="name_img">
+            @isset($post->image)
+            <img src="{{ asset('storage/image/' . $item->image) }}" name="image" value="{{$post->image}}" class="name_img">
             @else
             <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="name_img">
             @endisset
@@ -91,6 +91,8 @@
         <!--コンテンツboxここまで-->
 
         <!--以下複製-->
+
+
 
         <!--複製ここまで-->
       </div>

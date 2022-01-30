@@ -106,7 +106,7 @@ body {
 
 /*コンテンツ　箱*/
 .content_box {
-    height: 800px;
+    height: 600px;
     width: 610px;
     border: 1px solid #aaa8a8;
     border-radius: 5px;
@@ -128,6 +128,7 @@ body {
 .content_name_box {
     width: 610px;
     display: flex;
+    height: 60px;
     border-bottom: 1px solid #a6a6a6;
 }
 

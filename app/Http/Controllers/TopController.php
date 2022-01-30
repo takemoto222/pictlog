@@ -15,12 +15,14 @@ class TopController extends Controller
         $id = Auth::id();
         $id = User::find($id);
         $items = Post::where('user_id', $id)->get();
+        $post = DB::table('posts')->get();
         $item = User::where('id', $id)->with('posts')->first();
         //return view('mypage_edit', ['item' => $id]);
         return view('top', [
             'id' => $id,
             'item' => $item,
-            'post' => $items
+            'post' => $items,
+            'posts' => $post
         ]);
     }
 
