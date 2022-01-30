@@ -57,93 +57,41 @@
 
 
       <div class="main_inner">
-        <!--投稿されたコンテンツ　箱-->
+        <!--投稿されたコンテンツ 箱-->
         <div class="content_box">
-          <div class="content_main_imgarea">
-            <img src="{{ asset('pictlog/img/niku_1127.jpg') }}" class="main_img">
+
+
+          <!--表示部分-->
+          <!--Postからimage取得-->
+          @for($i = 0; $i < count($post); $i++) <div class="content_main_imgarea">
+            <img src="/storage/image/{{$post[$i]['image']}}" class="main_img">
+        </div>
+        @endfor
+
+
+
+        <!--ユーザー表示部分-->
+        <div class="content_name_box">
+
+          <!--ユーザーアイコン画像-->
+          <div class="name_img_box">
+            @isset($item->image)
+            <img src="{{ asset('storage/image/' . $item->image) }}" name="image" value="{{$item->image}}" class="name_img">
+            @else
+            <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="name_img">
+            @endisset
           </div>
-          <!--ユーザー表示部分-->
-          <div class="content_name_box">
-            <!--トップ画像-->
-            <div class="name_img_box">
-              <img src="{{ asset('pictlog/img/meet1.jpg') }}" class="name_img">
-            </div>
-            <div class="name_box">
-              <!--名前、投稿写真-->
-              <form action="" method="" class="form_area">
-                @csrf
-                <!--どのユーザーが更新するのかid特定-->
-                <!---->
-                <input type="text" name="name" placeholder="名前" class="name_area">
-              </form>
-            </div>
+          <!--名前-->
+          <div class="name_box">
+            <p class="name_area">
+              <!--投稿したユーザーの名前-->
+            </p>
           </div>
-          <!--画像説明文-->
-          <form action="#" method="#" class="content_form">
-            @csrf
-            <textarea name="item" rows="3" cols="100%" placeholder="写真説明" class="textarea">ご飯。</textarea>
-          </form>
         </div>
         <!--コンテンツboxここまで-->
 
         <!--以下複製-->
 
-        <!--投稿されたコンテンツ　箱-->
-        <div class="content_box">
-          <div class="content_main_imgarea">
-            <img src="{{ asset('pictlog/img/niku_1127.jpg') }}" class="main_img">
-          </div>
-          <!--ユーザー表示部分-->
-          <div class="content_name_box">
-            <!--トップ画像-->
-            <div class="name_img_box">
-              <img src="{{ asset('pictlog/img/meet1.jpg') }}" class="name_img">
-            </div>
-            <div class="name_box">
-              <!--名前、投稿写真-->
-              <form action="" method="" class="form_area">
-                @csrf
-                <!--どのユーザーが更新するのかid特定-->
-                <!---->
-                <input type="text" name="name" placeholder="名前" class="name_area">
-              </form>
-            </div>
-          </div>
-          <!--画像説明文-->
-          <form action="#" method="#" class="content_form">
-            @csrf
-            <textarea name="item" rows="3" cols="100%" placeholder="写真説明" class="textarea">ご飯。</textarea>
-          </form>
-        </div>
-        <!--コンテンツboxここまで-->
-        <!--投稿されたコンテンツ　箱-->
-        <div class="content_box">
-          <div class="content_main_imgarea">
-            <img src="{{ asset('pictlog/img/niku_1127.jpg') }}" class="main_img">
-          </div>
-          <!--ユーザー表示部分-->
-          <div class="content_name_box">
-            <!--トップ画像-->
-            <div class="name_img_box">
-              <img src="{{ asset('pictlog/img/meet1.jpg') }}" class="name_img">
-            </div>
-            <div class="name_box">
-              <!--名前、投稿写真-->
-              <form action="" method="" class="form_area">
-                @csrf
-                <!--どのユーザーが更新するのかid特定-->
-                <!---->
-                <input type="text" name="name" placeholder="名前" class="name_area">
-              </form>
-            </div>
-          </div>
-          <!--画像説明文-->
-          <form action="#" method="#" class="content_form">
-            @csrf
-            <textarea name="item" rows="3" cols="100%" placeholder="写真説明" class="textarea">ご飯。</textarea>
-          </form>
-        </div>
-        <!--コンテンツboxここまで-->
         <!--複製ここまで-->
       </div>
       <!--innnarのdiv-->

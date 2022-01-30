@@ -139,7 +139,6 @@
               @else
               <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="massage_icon_img">
               @endisset
-           
 
             <li class="massage_icon_li">
               <p class="user_name">{{$id->name}}</p>
