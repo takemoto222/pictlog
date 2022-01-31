@@ -57,49 +57,53 @@
 
 
       <div class="main_inner">
+
+
+
+        @foreach($posts as $post)
         <!--投稿されたコンテンツ 箱-->
         <div class="content_box">
-
-
           <!--表示部分-->
           <!--Postからimage取得-->
-          @for($i = 0; $i < count($post); $i++) <div class="content_main_imgarea">
-            <img src="/storage/image/{{$post[$i]['image']}}" class="main_img">
-        </div>
-        @endfor
-
-
-
-        <!--ユーザー表示部分-->
-        <div class="content_name_box">
-
-          <!--ユーザーアイコン画像-->
-          <div class="name_img_box">
-            @isset($post->image)
-            <img src="{{ asset('storage/image/' . $item->image) }}" name="image" value="{{$post->image}}" class="name_img">
-            @else
-            <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="name_img">
-            @endisset
+          <div class="content_main_imgarea">
+            <img src="/storage/image/{{$post->image}}" class="main_img">
           </div>
-          <!--名前-->
-          <div class="name_box">
-            <p class="name_area">
-              <!--投稿したユーザーの名前-->
-            </p>
+
+
+
+          <!--ユーザー表示部分-->
+          <div class="content_name_box">
+
+            <!--ユーザーアイコン画像-->
+            <div class="name_img_box">
+              <img src="{{ asset('storage/image/' . $post->image) }}" name="image" value="{{$post->image}}" class="name_img">
+            </div>
+            <!--名前-->
+            <div class="name_box">
+              <p class="name_area">
+                {{$post->name}}
+              </p>
+            </div>
+            <!--投稿文-->
+            <div class="textarea">
+              <p>{{$post->content}}</p>
+            </div>
           </div>
+
+          @endforeach
+
+          <!--コンテンツboxここまで-->
+
+          <!--以下複製-->
+
+
+
+          <!--複製ここまで-->
         </div>
-        <!--コンテンツboxここまで-->
+        <!--innnarのdiv-->
 
-        <!--以下複製-->
-
-
-
-        <!--複製ここまで-->
       </div>
-      <!--innnarのdiv-->
 
-    </div>
-
-    <script src="js/main.js"></script>
+      <script src="js/main.js"></script>
 
   </body>

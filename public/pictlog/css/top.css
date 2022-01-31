@@ -108,9 +108,9 @@ body {
 .content_box {
     height: 600px;
     width: 610px;
-    border: 1px solid #aaa8a8;
+    border: 1px solid rgb(231, 56, 56);
     border-radius: 5px;
-    margin-top: 7%;
+    margin-top: 10%;
     box-shadow: 1px 1px 3px black;
 }
 /*メイン画像*/
