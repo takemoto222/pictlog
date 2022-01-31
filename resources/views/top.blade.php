@@ -54,12 +54,7 @@
     <div class="inner-box">
       <!--トップビュー-->
 
-
-
       <div class="main_inner">
-
-
-
         @foreach($posts as $post)
         <!--投稿されたコンテンツ 箱-->
         <div class="content_box">
@@ -70,40 +65,42 @@
           </div>
 
 
-
           <!--ユーザー表示部分-->
           <div class="content_name_box">
-
             <!--ユーザーアイコン画像-->
             <div class="name_img_box">
               <img src="{{ asset('storage/image/' . $post->image) }}" name="image" value="{{$post->image}}" class="name_img">
             </div>
             <!--名前-->
             <div class="name_box">
-              <p class="name_area">
-                {{$post->name}}
-              </p>
+              <p class="name_area">{{$post->user}} </p>
             </div>
             <!--投稿文-->
-            <div class="textarea">
-              <p>{{$post->content}}</p>
-            </div>
+            <!--<div class="textarea">
+            <p></p>
+          </div>-->
+
           </div>
-
-          @endforeach
-
-          <!--コンテンツboxここまで-->
-
-          <!--以下複製-->
-
-
-
-          <!--複製ここまで-->
+          <!--投稿されたコンテンツ 箱 一区切り-->
         </div>
-        <!--innnarのdiv-->
+        <!--インナーボックス-->
+        @endforeach
+        <!--zenntai全体箱-->
 
+
+
+        <!--コンテンツboxここまで-->
+
+        <!--以下複製-->
+
+
+
+        <!--複製ここまで-->
       </div>
+      <!--innnarのdiv-->
 
-      <script src="js/main.js"></script>
+    </div>
+
+    <script src="js/main.js"></script>
 
   </body>

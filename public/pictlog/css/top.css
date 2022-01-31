@@ -106,11 +106,10 @@ body {
 
 /*コンテンツ　箱*/
 .content_box {
-    height: 600px;
     width: 610px;
     border: 1px solid rgb(231, 56, 56);
     border-radius: 5px;
-    margin-top: 10%;
+    margin-top: 15%;
     box-shadow: 1px 1px 3px black;
 }
 /*メイン画像*/
@@ -163,10 +162,7 @@ body {
 /*メインコンテンツ　フォーム*/
 .textarea {
     width: 610px;
-    height: 140px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+
     padding: 10px 12px;
 }
 
