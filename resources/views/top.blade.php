@@ -55,7 +55,7 @@
       <!--トップビュー-->
 
       <div class="main_inner">
-        @foreach($posts as $post)
+
         <!--投稿されたコンテンツ 箱-->
         <div class="content_box">
           <!--表示部分-->
@@ -73,7 +73,7 @@
             </div>
             <!--名前-->
             <div class="name_box">
-              <p class="name_area">{{$post->user}} </p>
+              <p class="name_area"> {{$post->name}}</p>
             </div>
             <!--投稿文-->
             <!--<div class="textarea">
@@ -84,7 +84,7 @@
           <!--投稿されたコンテンツ 箱 一区切り-->
         </div>
         <!--インナーボックス-->
-        @endforeach
+
         <!--zenntai全体箱-->
 
 
