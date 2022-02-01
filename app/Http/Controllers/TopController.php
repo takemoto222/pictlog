@@ -14,7 +14,7 @@ class TopController extends Controller
     {
         $id = Auth::id();  //認証しているユーザーidを取得
         //$items = Post::where('user_id', $id)->with('user')->get(); //←解説：Postから投稿情報を引っ張り出して$itemsに渡す //＋where関数の部分で、ログイン中のユーザーのIDと一致するuser_idをもつpostのみが取得されています
-        $items = Post::with('user')->get(); //↑から、where関数をなくしてこのように記述すると全件取得
+        $items = Post::with('user')->latest()->get(); //↑から、where関数をなくしてこのように記述すると全件取得
         //$post1 = new post();
         //$post = $post1->user();
         $item = User::where('id', $id)->with('posts')->get(); //Userにpostsの情報をを結びつけてitemに渡す

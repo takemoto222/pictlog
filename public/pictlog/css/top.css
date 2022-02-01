@@ -107,7 +107,7 @@ body {
 /*コンテンツ　箱*/
 .content_box {
     width: 610px;
-    border: 1px solid rgb(231, 56, 56);
+    border: 1px solid #a6a6a6;
     border-radius: 5px;
     margin-top: 15%;
     box-shadow: 1px 1px 3px black;

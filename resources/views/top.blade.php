@@ -61,7 +61,7 @@
           <!--表示部分-->
           <!--Postからimage取得-->
           <div class="content_main_imgarea">
-            <img src="/storage/image/{{$post->image}}" class="main_img">
+            <a href="{{ route('item_scr', ['id'=>$post['id']]) }}"><img src="/storage/image/{{$post->image}}" class="main_img"></a>
           </div>
 
 
@@ -69,36 +69,37 @@
           <div class="content_name_box">
             <!--ユーザーアイコン画像-->
             <div class="name_img_box">
-              <img src="{{ asset('storage/image/' . $post->image) }}" name="image" value="{{$post->image}}" class="name_img">
+              <a href="/{$id}"><img src="{{ asset('storage/image/' . $post->image) }}" name="image" value="{{$post->image}}" class="name_img"></a>
             </div>
             <!--名前-->
             <div class="name_box">
               <p class="name_area"> {{$post->user->name}}</p>
             </div>
-            <!--投稿文-->
-            <!--<div class="textarea">
-            <p></p>
-          </div>-->
-
           </div>
-          <!--投稿されたコンテンツ 箱 一区切り-->
-          @endforeach
+          <!--投稿文-->
+          <div class="textarea">
+            <p>{{$post->content}}</p>
+          </div>
+
         </div>
-        <!--インナーボックス-->
-
-        <!--zenntai全体箱-->
-
-
-
-        <!--コンテンツboxここまで-->
-
-        <!--以下複製-->
-
-
-
-        <!--複製ここまで-->
+        <!--投稿されたコンテンツ 箱 一区切り-->
+        @endforeach
       </div>
-      <!--innnarのdiv-->
+      <!--インナーボックス-->
+
+      <!--zenntai全体箱-->
+
+
+
+      <!--コンテンツboxここまで-->
+
+      <!--以下複製-->
+
+
+
+      <!--複製ここまで-->
+    </div>
+    <!--innnarのdiv-->
 
     </div>
 
