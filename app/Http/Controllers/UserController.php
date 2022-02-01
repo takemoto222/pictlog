@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $id = Auth::id();
         //リレーション 投稿記述
-        $items = Post::where('user_id', $id)->get();
+        $items = Post::where('user_id', $id)->latest()->get();
         // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
         $item = User::where('id', $id)->with('posts')->first();
         //dd()で$itemの中身を確認

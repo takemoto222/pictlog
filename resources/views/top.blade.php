@@ -80,10 +80,13 @@
           <div class="textarea">
             <p>{{$post->content}}</p>
           </div>
-
         </div>
         <!--投稿されたコンテンツ 箱 一区切り-->
         @endforeach
+        <!--ページネーション記述-->
+        {{ $page->links('pagination::bootstrap-4') }}
+
+
       </div>
       <!--インナーボックス-->
 
