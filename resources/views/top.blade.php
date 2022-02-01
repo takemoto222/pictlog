@@ -28,12 +28,12 @@
           <!--変更しました,
         topのリンクからマイページへ飛びたい-->
           <li class="nav_item">
-            <a href="{{route('index', ['id' => $id->id])}}" class=" nav_item_a">
+            <a href="{{route('index', ['id' => $id])}}" class=" nav_item_a">
               <img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img">
             </a>
           </li>
           <!--マイページ編集リンク-->
-          <li class="nav_item"><a href="{{route('mypage_edit', ['id' => $id->id])}}" class="nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
+          <li class="nav_item"><a href="{{route('mypage_edit', ['id' => $id])}}" class="nav_item_a"><img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img"> </a></li>
 
           <li class="nav_item"><a href="/contact" class="nav_item_a"><img src="{{ asset('pictlog/img/iconmall3.png') }}" class="header_icon_img"></a></li>
 
@@ -55,7 +55,7 @@
       <!--トップビュー-->
 
       <div class="main_inner">
-
+        @foreach ($posts as $post)
         <!--投稿されたコンテンツ 箱-->
         <div class="content_box">
           <!--表示部分-->
@@ -73,7 +73,7 @@
             </div>
             <!--名前-->
             <div class="name_box">
-              <p class="name_area"> {{$post->name}}</p>
+              <p class="name_area"> {{$post->user->name}}</p>
             </div>
             <!--投稿文-->
             <!--<div class="textarea">
@@ -82,6 +82,7 @@
 
           </div>
           <!--投稿されたコンテンツ 箱 一区切り-->
+          @endforeach
         </div>
         <!--インナーボックス-->
 
