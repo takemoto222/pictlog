@@ -16,7 +16,9 @@ class PostController extends Controller
         //リレーションのため追加
         $user = Auth::user();
         $id = $request->input('id');
-        $item = DB::table('users')->where('name', 'image', $user)->first();
+        // $item = DB::table('users')->where('name', 'image', $user)->first();
+        //↑のDBからの取得から↓に変更
+        $item = Post::with('user')->first();
         //dd($item);
         //1ページに1投稿まで の記述
         $photos = DB::table('posts')->latest()->get();

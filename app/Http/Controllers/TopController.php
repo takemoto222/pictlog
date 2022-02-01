@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Post;
-use Illuminate\Pagination\Paginator;
+
 
 class TopController extends Controller
 {
@@ -33,10 +33,5 @@ class TopController extends Controller
     public function logout_top()
     {
         return view('logout_top');
-    }
-
-    public function boot()
-    {
-        Paginator::useBootstrap();
     }
 }

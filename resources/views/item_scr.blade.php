@@ -139,9 +139,10 @@
               @else
               <img src="{{ asset('pictlog/img/kawa3.jpg') }}" class="massage_icon_img">
               @endisset
+            </li>
 
             <li class="massage_icon_li">
-              <p class="user_name">{{$id->name}}</p>
+              <p class="user_name">{{$item->user->name}}</p>
             </li>
             <!--いいね-->
             <li class="massage_icon_li">
