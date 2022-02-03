@@ -216,6 +216,7 @@
 .textarea {
     width: 100%;
     border: 2px solid #eee;
+    pointer-events: none;
 }
 
 /*いいね、コメントエリア箱*/

@@ -148,7 +148,7 @@
             </li>
             <!--削除ボタン-->
             <li class="massage_icon_li">
-              @if (Auth::user()->id == $item->user_id)
+              @if (Auth::user()->id == $item->id)
               <form action="{{ route('item_scr.delete', ['id' => $photo->id]) }}" method="post" class="form_delete_icon">
                 @csrf
                 <button class="delete_button">削除</button>
