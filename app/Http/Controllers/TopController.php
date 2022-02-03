@@ -18,7 +18,8 @@ class TopController extends Controller
         $items = Post::with('user')->latest()->paginate(10); //↑から、where関数をなくしてこのように記述すると全件取得
         //$post1 = new post();
         //$post = $post1->user();
-        $item = User::where('id', $id)->with('posts')->get(); //Userにpostsの情報をを結びつけてitemに渡す
+        $item = User::where('id', $id)->with('posts')->get(); //Userにpostsの情報を結びつけてitemに渡す
+        //dd($item);
         $page = Post::Paginate(5);
         return view('top', [ //viewに渡す
             'id' => $id,

@@ -69,7 +69,7 @@
           <div class="content_name_box">
             <!--ユーザーアイコン画像-->
             <div class="name_img_box">
-              <a href="/{$id}"><img src="{{ asset('storage/image/' . $post->image) }}" name="image" value="{{$post->image}}" class="name_img"></a>
+              <a href="/{$id}"><img src="/storege/image/{{$post->user->image}}" class="name_img"></a>
             </div>
             <!--名前-->
             <div class="name_box">
