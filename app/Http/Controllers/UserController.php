@@ -15,7 +15,7 @@ class UserController extends Controller
     //練習
     public function index($id)
     {
-        $id = Auth::id();
+        $user = Auth::id();
         //リレーション 投稿記述
         $items = Post::where('user_id', $id)->latest()->get();
         // 下記のコードでユーザーのデータと投稿データ両方がitem変数の中に代入されます
@@ -25,7 +25,8 @@ class UserController extends Controller
         // 画面に表示されます
         return view('index', [
             'item' => $item,
-            'post' => $items
+            'post' => $items,
+            'user' => $user
         ]);
     }
 
