@@ -69,7 +69,7 @@
           <div class="content_name_box">
             <!--ユーザーアイコン画像-->
             <div class="name_img_box">
-              <a href="/{$id}"><img src="/storege/image/{{$post->user->image}}" class="name_img"></a>
+              <a href="/{{$post->user_id}}"><img src="/storage/image/{{$post->user->image}}" class="name_img"></a>
             </div>
             <!--名前-->
             <div class="name_box">
