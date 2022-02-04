@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use ZipArchive;
 
 class PostController extends Controller
 {
@@ -19,7 +18,6 @@ class PostController extends Controller
         $id = $request->input('id');
         // $item = DB::table('users')->where('name', 'image', $user)->first();
         //↑のDBから取り出す記述から　↓に変更
-
         //dd($item);
         //1ページに1投稿まで の記述
         $photos = DB::table('posts')->latest()->get();

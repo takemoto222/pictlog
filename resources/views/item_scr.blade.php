@@ -133,7 +133,7 @@
 
             <!--ユーザーアイコン-->
             <li class="massage_icon_li_img">
-              <img src="/storage/image/{{$item->image}}" class="massage_icon_img">
+              <a href="/{{$item->id}}"><img src="/storage/image/{{$item->image}}" class="massage_icon_img"></a>
 
             <li class="massage_icon_li">
               <p class="user_name">{{$item->name}}</p>

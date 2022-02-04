@@ -53,9 +53,12 @@ class UserController extends Controller
     //マイページ編集
     public function mypage_edit($id)
     {
+        $user = Auth::id();
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
-        $id = Auth::id();
-        return view('mypage_edit', ['item' => $items]);
+        return view('mypage_edit', [
+            'user' => $user,
+            'item' => $items,
+        ]);
     }
 
     //public function edit_update(Request $request)
@@ -66,6 +69,7 @@ class UserController extends Controller
     // }
     public function edit_update(Request $request)
     {
+        $user = Auth::id();
         $image_path = $request->file('image')->store('public/image');  //publicのimageに保存する
 
         $path = str_replace('public/image/', '', $image_path); // 画像のパスを加工
@@ -80,6 +84,7 @@ class UserController extends Controller
         $items = Post::where('user_id', $request->id)->get(); //リクエストの情報に含まれるidを持つUserが投稿したPostだけを取り出しています。
         $item = User::find($request->id)->with('posts')->first(); //リクエストの情報に含まれるidを持つUserを取得し、取り出した情報は配列になっているのですが、このUserの配列の中に、userが投稿した情報も含まれています。
         return view('index', [
+            'user' => $user,
             'item' => $item,
             'post' => $items
         ]);
