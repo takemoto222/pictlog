@@ -46,8 +46,6 @@ class PostController extends Controller
         $id = Auth::id();
         $id = User::find($id);
         return view('item_post', ['id' => $id]);
-        // $user = Auth::user(); //追加行
-        //return $user; //追加行
     }
 
 

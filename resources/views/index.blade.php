@@ -34,7 +34,7 @@
 
             <!--マイページ編集リンク-->
             <li class="nav_item">
-              <a href="/mypage_edit" class="nav_item_a">
+              <a href="/mypage_edit/{{$user}}" class="nav_item_a">
                 <img src="{{ asset('pictlog/img/seting.png') }}" class="header_icon_img">
               </a>
             </li>

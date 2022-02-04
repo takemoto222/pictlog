@@ -168,23 +168,6 @@ body {
 
 /*メインコンテンツここまで*/
 
-/*スクロール*/
-.scroll-top {
-    position: fixed;
-    right: 2%;
-    bottom: 5%;
-    background-color: #999;
-    opacity: 0.8;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 20px;
-}
-
 /**/
 .page {
     font-size: 20px;

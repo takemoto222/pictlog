@@ -222,7 +222,7 @@
 /*いいね、コメントエリア箱*/
 .message_area {
     width: 900px;
-    height: 50px;
+    height: 60px;
     border: 1px solid #eee;
     margin: 0 auto;
 }
@@ -230,6 +230,7 @@
 
 .icon_area {
     width: 900px;
+    height: 60px;
 }
 
 .icon_area_list {
@@ -242,6 +243,7 @@
     line-height: center;
     list-style: none;
     margin-left: 5%;
+    margin-top: 5px;
 }
 
 .massage_icon {
@@ -252,11 +254,10 @@
 
 /*ユーザーアイコン部分*/
 .massage_icon_li_img {
-    display: flex;
     list-style: none;
     width: 40px;
     height: 40px;
-    margin: 0px 0px 20px 0px;
+    border-radius: 50%;
 }
 
 .massage_icon_img {
@@ -264,7 +265,15 @@
     height: 40px;
     border-radius: 50%;
 }
-/*ユーザーアイコン部分*/
+/*ユーザー名前部分*/
+.massage_icon_li_name {
+    width: 25px;
+    height: 25px;
+    line-height: center;
+    list-style: none;
+    margin-left: 5%;
+}
+
 .user_name {
     font-size: 15px;
     display: flex;
@@ -278,6 +287,7 @@
 
 .form_delete_icon {
     margin: 0px 0px 0px 450px;
+    margin-bottom: 10px;
 }
 
 .delete_button {

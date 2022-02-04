@@ -134,8 +134,8 @@
             <!--ユーザーアイコン-->
             <li class="massage_icon_li_img">
               <a href="/{{$item->id}}"><img src="/storage/image/{{$item->image}}" class="massage_icon_img"></a>
-
-            <li class="massage_icon_li">
+            </li>
+            <li class="massage_icon_li_name">
               <p class="user_name">{{$item->name}}</p>
             </li>
             <!--いいね-->
@@ -157,13 +157,13 @@
             </li>
           </ul>
         </div>
-
-        <!--コメントエリア-->
-        <div class="comment_area"></div>
       </div>
+      <!--コメントエリア-->
+      <div class="comment_area"></div>
+    </div>
 
-      <!--savascript-->
-      <script src="{{ asset('pictlog/js/item.js') }}"></script>
+    <!--savascript-->
+    <script src="{{ asset('pictlog/js/item.js') }}"></script>
 
     </div>
   </body>
