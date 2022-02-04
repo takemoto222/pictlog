@@ -133,7 +133,8 @@ class PostController extends Controller
     public function delete(Request $request)
     {
         // リクエストで送られてきたTodoのidを使い、テーブル側のどのTodoがリクエストのPostなのかを探してdeleteメソッドで削除しています
-        Post::find($post->user_id)->delete();
+        $photo = Auth::id();
+        Post::find($photo->id)->delete();
         return redirect('/{{$user}}');
     }
 }
