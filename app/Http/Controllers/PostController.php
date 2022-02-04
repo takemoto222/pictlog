@@ -26,7 +26,7 @@ class PostController extends Controller
         } else {
             $photo = $photos->where('id', $id)->first();
         }
-
+        dd($photo);
         $item = User::find($photo->user_id);
         return view(
             'item_scr',
@@ -133,8 +133,8 @@ class PostController extends Controller
     public function delete(Request $request)
     {
         // リクエストで送られてきたTodoのidを使い、テーブル側のどのTodoがリクエストのPostなのかを探してdeleteメソッドで削除しています
-        $photo = Auth::id();
-        Post::find($photo->id)->delete();
-        return redirect('/{{$user}}');
+        $user = Auth::id();
+        Post::find($request->id)->delete();
+        return redirect($user);
     }
 }
