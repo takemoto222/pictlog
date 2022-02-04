@@ -36,49 +36,53 @@
       <!--ナビバーここまで-->
     </header>
     <!--インナーボックス-->
-    <div class="inner-box">
 
 
 
 
-      <div class="main_inner">
-        <!--コンテンツ　箱-->
+    <div class="main_inner">
+      <!--コンテンツ　箱-->
+      <!--インナーボックス-->
+      <div class="inner-box">
+        @foreach ($posts as $post)
+        <!--投稿されたコンテンツ 箱-->
         <div class="content_box">
+          <!--表示部分-->
+          <!--Postからimage取得-->
           <div class="content_main_imgarea">
-            <img src="img/niku_1127.jpg" class="main_img">
+            <img src="/storage/image/{{$post->image}}" class="main_img">
           </div>
+
+
           <!--ユーザー表示部分-->
           <div class="content_name_box">
-            <!--トップ画像-->
+            <!--ユーザーアイコン画像-->
             <div class="name_img_box">
-              <img src="img/meet1.jpg" class="name_img">
+              <img src="/storage/image/{{$post->user->image}}" class="name_img">
             </div>
+            <!--名前-->
             <div class="name_box">
-              <!--名前、プロフィール-->
-              <form action="" method="" class="form_area">
-                @csrf
-                <!--どのユーザーが更新するのかid特定-->
-                {{--<input type="hidden" name="id" value="{{$item->id}}">--}}
-                {{-- <input type="text" name="name" placeholder="名前" class="name_area">--}}
-              </form>
+              <p class="name_area">{{$post->user->name}}</p>
             </div>
           </div>
-          <!--画像説明文-->
-          <form action="#" method="#" class="content_form">
-            @csrf
-            <textarea name="item" rows="3" cols="100%" placeholder="自己紹介" class="textarea">ご飯</textarea>
-          </form>
+          <!--投稿文-->
+          <div class="textarea">
+            <p>{{$post->content}}</p>
+          </div>
         </div>
-        <!--コンテンツboxここまで-->
+        <!--投稿されたコンテンツ 箱 一区切り-->
+        @endforeach
 
-        <!--以下複製-->
+
 
       </div>
-      <!--innnarのdiv-->
+      <!--インナーボックス-->
+      <!--コンテンツboxここまで-->
+      <!--以下複製-->
+    </div>
+    <!--innarのdiv-->
 
     </div>
 
-    <button class="scroll-top" id="button">↑</button>
-    <script src="js/main.js"></script>
-    <script src="js/scroll.js"></script>
+
   </body>

@@ -135,7 +135,7 @@
             <li class="massage_icon_li_img">
               <a href="/{{$item->id}}"><img src="/storage/image/{{$item->image}}" class="massage_icon_img"></a>
             </li>
-            <li class="massage_icon_li_name">
+            <li class="massage_icon_li">
               <p class="user_name">{{$item->name}}</p>
             </li>
             <!--いいね-->
@@ -149,7 +149,7 @@
             <!--削除ボタン-->
             <li class="massage_icon_li">
               @if (Auth::user()->id == $item->id)
-              <form action="{{ route('item_scr.delete', ['id' => $photo->id]) }}" method="post" class="form_delete_icon">
+              <form action="{{ route('item_scr.delete', ['id' => $photo->user_id]) }}" method="post" class="form_delete_icon">
                 @csrf
                 <button class="delete_button">削除</button>
               </form>

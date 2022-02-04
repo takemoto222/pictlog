@@ -34,6 +34,13 @@ class TopController extends Controller
 
     public function logout_top()
     {
-        return view('logout_top');
+        $id = Auth::id();
+        $item = User::where('id', $id)->with('posts')->get();
+        $items = Post::with('user')->latest();
+        return view('logout_top', [
+            'id' => $id,
+            'item' => $item,
+            'posts' => $items
+        ]);
     }
 }
