@@ -63,7 +63,7 @@ class PostController extends Controller
         $image = $image_file; //$imageにファイル名を入れる
         //二枚目追加
         $image2_file = $request->image2;
-        if (empty($id)) {
+        if (empty($request->$image2_file)) {
             $image2_file = $request->file('image2')->store('public/image');
         } else {
             $image2_file = $request->file('image2');
@@ -72,6 +72,7 @@ class PostController extends Controller
         $image2_file = str_replace('public/image/', '', $image2_file);
         $image2 = new Post;
         $image2 = $image2_file;
+        dd($image2_file);
         //二枚目追加ここまで
         //3枚目
         $image3_file = $request->image3;
