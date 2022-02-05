@@ -63,34 +63,49 @@ class PostController extends Controller
         $image = $image_file; //$imageにファイル名を入れる
         //二枚目追加
         $image2_file = $request->image2;
-        if (empty($request->$image2_file)) {
-            $image2_file = $request->file('image2')->store('public/image');
+        //↓nullが通るようにするためのif文
+        if (empty($request->$image2_file)) {  //Empty() は空=true
+            $image2_file = $request->file('image2'); //nullを保存する処理
         } else {
-            $image2_file = $request->file('image2');
+            $image2_file = $request->file('image2')->store('public/image'); //保存する処理
         }
-        $image2_file = $request->file('image2')->store('public/image');
         $image2_file = str_replace('public/image/', '', $image2_file);
         $image2 = new Post;
         $image2 = $image2_file;
-        dd($image2_file);
         //二枚目追加ここまで
         //3枚目
         $image3_file = $request->image3;
-        $image3_file = $request->file('image3')->store('public/image');
+        //↓nullが通るようにするためのif文
+        if (empty($request->$image3_file)) {  //Empty() は空=true
+            $image3_file = $request->file('image3'); //nullを保存する処理
+        } else {
+            $image3_file = $request->file('image3')->store('public/image'); //保存する処理
+        }
+
         $image3_file = str_replace('public/image/', '', $image3_file);
         $image3 = new Post;
         $image3 = $image3_file;
         //3枚目追加ここまで
         //4枚目
         $image4_file = $request->image4;
-        $image4_file = $request->file('image4')->store('public/image');
+        //↓nullが通るようにするためのif文
+        if (empty($request->$image4_file)) {  //Empty() は空=true
+            $image4_file = $request->file('image4'); //nullを保存する処理
+        } else {
+            $image4_file = $request->file('image4')->store('public/image'); //保存する処理
+        }
         $image4_file = str_replace('public/image/', '', $image4_file);
         $image4 = new Post;
         $image4 = $image4_file;
         //4枚目追加ここまで
         //5枚目
         $image5_file = $request->image5;
-        $image5_file = $request->file('image5')->store('public/image');
+        //↓nullが通るようにするためのif文
+        if (empty($request->$image5_file)) {  //Empty() は空=true
+            $image5_file = $request->file('image5'); //nullを保存する処理
+        } else {
+            $image5_file = $request->file('image5')->store('public/image'); //保存する処理
+        }
         $image5_file = str_replace('public/image/', '', $image5_file);
         $image5 = new Post;
         $image5 = $image5_file;
@@ -107,7 +122,7 @@ class PostController extends Controller
             /*'user_id' => $request->user_id,*/
         ];
         DB::insert('insert into posts(user_id, name, content, image, image2, image3, image4, image5) values(:user_id, :name, :content, :image, :image2, :image3, :image4, :image5)', $param); //画像追加５枚まで
-        return redirect('/item_scr');
+        return redirect('/top');
     }
 
     public function item_image(Request $request)
