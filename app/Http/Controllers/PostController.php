@@ -26,7 +26,7 @@ class PostController extends Controller
         } else {
             $photo = $photos->where('id', $id)->first();
         }
-        dd($photo);
+        //dd($photo);
         $item = User::find($photo->user_id);
         return view(
             'item_scr',
@@ -63,6 +63,11 @@ class PostController extends Controller
         $image = $image_file; //$imageにファイル名を入れる
         //二枚目追加
         $image2_file = $request->image2;
+        if (empty($id)) {
+            $image2_file = $request->file('image2')->store('public/image');
+        } else {
+            $image2_file = $request->file('image2');
+        }
         $image2_file = $request->file('image2')->store('public/image');
         $image2_file = str_replace('public/image/', '', $image2_file);
         $image2 = new Post;

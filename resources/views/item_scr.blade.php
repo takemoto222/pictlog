@@ -91,7 +91,7 @@
 
 
 
-        <!--　→ -->
+        <!-- → -->
         <div class=" next-btn btns">
           <i class="fas fa-angle-right fa-3x"></i>
         </div>
