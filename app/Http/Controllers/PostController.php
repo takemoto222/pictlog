@@ -33,7 +33,7 @@ class PostController extends Controller
             [
                 'photo' => $photo,
                 'photos' => $photos,
-                'id' => $user,
+                'user' => $user,
                 'item' => $item //userの情報をbladeに渡す
             ]
         );
@@ -121,6 +121,11 @@ class PostController extends Controller
             'image5' => $image5, //追加
             /*'user_id' => $request->user_id,*/
         ];
+        dd($image_file);
+        dd($image_file2);
+        dd($image_file3);
+        dd($image_file4);
+        dd($image_file5);
         DB::insert('insert into posts(user_id, name, content, image, image2, image3, image4, image5) values(:user_id, :name, :content, :image, :image2, :image3, :image4, :image5)', $param); //画像追加５枚まで
         return redirect('/top');
     }
