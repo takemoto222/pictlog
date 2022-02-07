@@ -26,6 +26,7 @@ class PostController extends Controller
         } else {
             $photo = $photos->where('id', $id)->first();
         }
+        dd($photos); //投稿画像データを渡している
         //dd($user->user_id);
         //dd($photo);
         $item = User::find($photo->user_id);
@@ -58,6 +59,12 @@ class PostController extends Controller
         $request->all();
         //一枚目
         $image_file = $request->image;   //image_fileという変数に$request->imageの中身を追加する
+        if (empty($request->image)) {  //Empty() は空=true
+            $image_file = $request->file('image'); //nullを保存する処理
+        } else {
+            $image_file = $request->file('image')->store('public/image'); //保存する処理
+        }
+
         $image_file = $request->file('image')->store('public/image');  //publicのimageに保存する
         $image_file = str_replace('public/image/', '', $image_file);
         $image = new Post;
@@ -65,7 +72,7 @@ class PostController extends Controller
         //二枚目追加
         $image2_file = $request->image2;
         //↓nullが通るようにするためのif文
-        if (empty($request->image2_file)) {  //Empty() は空=true
+        if (empty($request->image2)) {  //Empty() は空=true
             $image2_file = $request->file('image2'); //nullを保存する処理
         } else {
             $image2_file = $request->file('image2')->store('public/image'); //保存する処理
@@ -77,7 +84,7 @@ class PostController extends Controller
         //3枚目
         $image3_file = $request->image3;
         //↓nullが通るようにするためのif文
-        if (empty($request->image3_file)) {  //Empty() は空=true
+        if (empty($request->image3)) {  //Empty() は空=true
             $image3_file = $request->file('image3'); //nullを保存する処理
         } else {
             $image3_file = $request->file('image3')->store('public/image'); //保存する処理
@@ -90,7 +97,7 @@ class PostController extends Controller
         //4枚目
         $image4_file = $request->image4;
         //↓nullが通るようにするためのif文
-        if (empty($request->image4_file)) {  //Empty() は空=true
+        if (empty($request->image4)) {  //Empty() は空=true
             $image4_file = $request->file('image4'); //nullを保存する処理
         } else {
             $image4_file = $request->file('image4')->store('public/image'); //保存する処理
@@ -102,7 +109,7 @@ class PostController extends Controller
         //5枚目
         $image5_file = $request->image5;
         //↓nullが通るようにするためのif文
-        if (empty($request->image5_file)) {  //Empty() は空=true
+        if (empty($request->image5)) {  //Empty() は空=true
             $image5_file = $request->file('image5'); //nullを保存する処理
         } else {
             $image5_file = $request->file('image5')->store('public/image'); //保存する処理
@@ -122,6 +129,7 @@ class PostController extends Controller
             'image5' => $image5, //追加
             /*'user_id' => $request->user_id,*/
         ];
+
         DB::insert('insert into posts(user_id, name, content, image, image2, image3, image4, image5) values(:user_id, :name, :content, :image, :image2, :image3, :image4, :image5)', $param); //画像追加５枚まで
         return redirect('/top');
     }
