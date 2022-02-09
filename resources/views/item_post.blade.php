@@ -51,7 +51,7 @@
           @isset($photo->image)
           <img src="/storage/{{$photo->image}}" name="image" class="post_image">
           @else
-          <img src="{{ asset('pistlog/img/noimage.png') }}">
+          <img src="{{ asset('pictlog/img/noimage.png') }}">
           @endisset
           <ul class="img_list">
             <li class="img_li">

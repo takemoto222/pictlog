@@ -34,13 +34,21 @@ class TopController extends Controller
 
     public function logout_top()
     {
-        $id = Auth::id();
-        $item = User::where('id', $id)->with('posts')->get();
-        $items = Post::with('user')->latest();
-        return view('logout_top', [
+        $id = Auth::id();  //認証しているユーザーidを取得
+        $item = User::where('id', $id)->with('posts')->get(); //Userにpostsの情報を結びつけてitemに渡す
+        //$items = Post::where('user_id', $id)->with('user')->get(); //←解説：Postから投稿情報を引っ張り出して$itemsに渡す //＋where関数の部分で、ログイン中のユーザーのIDと一致するuser_idをもつpostのみが取得されています
+        $items = Post::with('user')->latest()->paginate(10); //↑から、where関数をなくしてこのように記述すると全件取得
+        //$post1 = new post();
+        //$post = $post1->user();
+
+        //dd($items);
+        $page = Post::Paginate(5);
+        return view('logout_top', [ //viewに渡す
             'id' => $id,
-            'item' => $item,
-            'posts' => $items
+            'item' => $item, //Userの情報を渡す
+            'posts' => $items, //Postの情報を渡す
+            //'posts' => $post
+            'page' => $page
         ]);
     }
 }

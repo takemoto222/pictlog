@@ -26,10 +26,11 @@ class PostController extends Controller
         } else {
             $photo = $photos->where('id', $id)->first();
         }
-        dd($photos); //投稿画像データを渡している
+        //dd($photos); //投稿画像データを渡している
         //dd($user->user_id);
-        //dd($photo);
+
         $item = User::find($photo->user_id);
+        //dd($photo);
         return view(
             'item_scr',
             [

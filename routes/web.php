@@ -12,10 +12,14 @@ Route::get('/login', [TopController::class, 'login']);
 //新規登録
 Route::get('/register', [TopController::class, '/register']);
 //トップページログアウト
-Route::get('/logout_top', [TopController::class, 'logout_top']);
+Route::get('/logout_top', [TopController::class, 'logout_top'])->name('logout_top');
 //トップページ
-Route::get('/top', [TopController::class, 'top'])->name('top');
-
+Route::group(
+  ['middleware' => 'auth'],
+  function () {
+    Route::get('/top', [TopController::class, 'top'])->name('top');
+  }
+);
 //投稿ページ
 
 Route::group(
@@ -34,9 +38,14 @@ Route::group(
 
 
 //index マイページ
-Route::get('/{id}', [UserController::class, 'index'])->name('index');
-Route::post('/create/{id}', [UserController::class, 'create']);
-Route::get('/update/{id}', [UserController::class, 'update']);
+Route::group(
+  ['middleware' => 'auth'],
+  function () {
+    Route::get('/{id}', [UserController::class, 'index'])->name('index');
+    Route::post('/create/{id}', [UserController::class, 'create']);
+    Route::get('/update/{id}', [UserController::class, 'update']);
+  }
+);
 //練習
 
 

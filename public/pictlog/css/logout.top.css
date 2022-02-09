@@ -23,27 +23,6 @@ body {
     font-size: 35px;
 }
 
-/*検索*/
-.seach_space {
-    border-radius: 2px;
-    height: 25px;
-    width: 300px;
-    margin-left: 50px;
-    margin-top: 6%;
-    border: 3px solid #eee;
-}
-
-.seach_button {
-    height: 25px;
-    width: 60px;
-    padding: 2px 5px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #696969;
-    border: 1px solid #eee;
-    border-radius: 2px;
-}
-
 /*ナビ*/
 .nav {
     display: flex;
@@ -54,7 +33,7 @@ body {
 .nav_list {
     display: flex;
     margin-right: auto;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 .nav_item {
@@ -95,41 +74,44 @@ body {
 /*ここからメイン*/
 /*ここからメイン*/
 /*main インナー*/
-.main_inner {
-    width: 1080px;
-    margin-top: 10%;
-}
 
-/*インナーボックス 各ボックスの箱*/
+/*インナーボックス*/
 .inner-box {
-    width: 1080px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 960px;
+    margin: auto;
 }
 
-/*１つのボックス全体　箱*/
+/**/
+/*ここからメイン*/
+/*main インナー*/
+.main_inner {
+    width: 610px;
+    margin: auto;
+    margin-top: 15%;
+}
+
+/*コンテンツ　箱*/
 .content_box {
-    width: 310px;
+    width: 610px;
     border: 1px solid #a6a6a6;
     border-radius: 5px;
-    margin-top: 5%;
-    margin-left: 30px;
+    margin-top: 15%;
     box-shadow: 1px 1px 3px black;
 }
 /*メイン画像*/
 .content_main_imgarea {
-    height: 300px;
-    width: 310px;
+    height: 600px;
+    width: 610px;
 }
 
 .main_img {
-    height: 300px;
-    width: 310px;
+    height: 600px;
+    width: 610px;
 }
 
 /*ユーザー情報表示部分*/
 .content_name_box {
-    width: 310px;
+    width: 610px;
     display: flex;
     height: 60px;
     border-bottom: 1px solid #a6a6a6;
