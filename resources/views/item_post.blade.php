@@ -48,11 +48,7 @@
         <form action="/item_add" method="post" class="post_form" enctype="multipart/form-data">
           @csrf
           <!--画像-->
-          @isset($photo->image)
-          <img src="/storage/{{$photo->image}}" name="image" class="post_image">
-          @else
-          <img src="{{ asset('pictlog/img/noimage.png') }}">
-          @endisset
+
           <ul class="img_list">
             <li class="img_li">
               <img id="preview1" class="test_img">

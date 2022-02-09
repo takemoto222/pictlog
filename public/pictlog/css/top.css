@@ -110,6 +110,7 @@ body {
     border: 1px solid #a6a6a6;
     border-radius: 5px;
     margin-top: 15%;
+    margin-bottom: 15%;
     box-shadow: 1px 1px 3px black;
 }
 /*メイン画像*/
@@ -162,7 +163,6 @@ body {
 /*メインコンテンツ　フォーム*/
 .textarea {
     width: 610px;
-
     padding: 10px 12px;
 }
 
