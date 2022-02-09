@@ -72,34 +72,34 @@
 
 
                 @if(($photo->image2))
-                <li><img src="storage/image/{{($photo->image2)}}" value="{{$photo->image2}}" name="image2" alt="画像" multiple /></li>
+                <li><img src="storage/image/{{($photo->image2)}}" value="{{$photo->image2}}" name="image2" alt="画像"></li>
                 @else
-                <li><img src="{{ asset('pictlog/img/noimage.png') }}" value="{{$photo->image2}}" name="image2" alt="画像" multiple /></li>
+                <li><img src="{{ asset('pictlog/img/noimage.png') }}" value="{{$photo->image2}}" name="image2" alt="画像"></li>
                 @endif
 
 
                 @if(($photo->image3))
-                <li><img src="storage/image/{{($photo->image3)}}" name="image3" alt="画像" multiple /></li>
+                <li><img src="storage/image/{{($photo->image3)}}" name="image3" alt="画像"></li>
                 @else
-                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image3" alt="画像" multiple /></li>
+                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image3" alt="画像"></li>
                 @endif
 
                 @if(($photo->image4))
-                <li><img src="storage/image/{{($photo->image4)}}" name="image4" alt="画像" multiple /></li>
+                <li><img src="storage/image/{{($photo->image4)}}" name="image4" alt="画像"></li>
                 @else
-                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image4" alt="画像" multiple /></li>
+                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image4" alt="画像"></li>
                 @endif
 
                 @if(($photo->image5))
-                <li><img src="storage/image/{{($photo->image5)}}" name="image5" alt="画像" multiple /></li>
+                <li><img src="storage/image/{{($photo->image5)}}" name="image5" alt="画像"></li>
                 @else
-                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image5" alt="画像" multiple /></li>
+                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image5" alt="画像"></li>
                 @endif
 
                 @if(($photo->image))
-                <li><img src="storage/image/{{($photo->image)}}" name="image" alt="画像" multiple /></li>
+                <li><img src="storage/image/{{($photo->image)}}" name="image" alt="画像"></li>
                 @else
-                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image" alt="画像" multiple /></li>
+                <li><img src="{{ asset('pictlog/img/noimage.png') }}" name="image" alt="画像"></li>
                 @endif
 
 
