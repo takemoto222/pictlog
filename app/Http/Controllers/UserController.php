@@ -55,18 +55,14 @@ class UserController extends Controller
     {
         $user = Auth::id();
         $items = User::find($id); //テストからIDを取得、idを特定 $itemsに渡す
+
+        //dd($user);
         return view('mypage_edit', [
             'user' => $user,
             'item' => $items,
         ]);
     }
 
-    //public function edit_update(Request $request)
-    //{
-    //  $form = $request->all('name', 'profile', 'image'); //nameをデータベースから全て取り出す formに渡す
-    //User::where('id', $request->id)->update($form); //'id', $request->idで更新するIDを特定、update($form)でnameを更新
-    // return redirect("/{$request->id}");
-    // }
     public function edit_update(Request $request)
     {
         $user = Auth::id();
@@ -79,10 +75,8 @@ class UserController extends Controller
             'image' => $path //imageには先ほど加工した画像ファイルの値
         ]); // 値の更新
 
-        // $post = User::where('id', $request->id)->first();
-        //return view("index", ["item" => $post]); // ユーザ情報の返却
         $items = Post::where('user_id', $request->id)->get(); //リクエストの情報に含まれるidを持つUserが投稿したPostだけを取り出しています。
-        $item = User::find($request->id)->with('posts')->first(); //リクエストの情報に含まれるidを持つUserを取得し、取り出した情報は配列になっているのですが、このUserの配列の中に、userが投稿した情報も含まれています。
+        $item = User::find($request->id); //リクエストの情報に含まれるidを持つUserを取得 このUserの配列の中に、userが投稿した情報も含まれている
         return view('index', [
             'user' => $user,
             'item' => $item,

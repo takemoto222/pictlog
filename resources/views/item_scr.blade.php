@@ -35,10 +35,6 @@
       <ul class="nav_list">
         <!--topへのリンク-->
         <li class="nav_item"><a href="/top" class="nav_item_a"><img src="{{ asset('pictlog/img/iconhome2.png')}}" class="header_icon_img"></a></li>
-        <!--マイページへのリンク-->
-        <li class="nav_item"> <a href="/{{$user}}" class=" nav_item_a">
-            <img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img">
-          </a></li>
       </ul>
     </nav>
     <!--ナビバーここまで-->
@@ -200,3 +196,7 @@
 </body>
 
 </html>
+
+
+
+

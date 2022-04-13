@@ -75,12 +75,12 @@
         <!--名前、プロフィール-->
         <div class="toptext_area">
 
-          <!--フォローフォロワー数-->
+          <!--フォローフォロワー数
           <form action="" method="" class="follow_form">
             <label class="follow_number">follow</label>
             <label class="follow_number">follower</label>
           </form>
-          <!--フォロワーここまで-->
+          フォロワーここまで-->
 
 
           <form action="/update/{{ $item->id }}" method="get" class="form_area_2">

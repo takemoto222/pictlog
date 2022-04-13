@@ -132,7 +132,8 @@ class PostController extends Controller
         ];
 
         DB::insert('insert into posts(user_id, name, content, image, image2, image3, image4, image5) values(:user_id, :name, :content, :image, :image2, :image3, :image4, :image5)', $param); //画像追加５枚まで
-        return redirect('/top');
+        return
+            redirect('/' . Auth::id());
     }
 
     public function item_image(Request $request)

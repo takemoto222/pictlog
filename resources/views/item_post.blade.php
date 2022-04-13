@@ -29,7 +29,7 @@
       <nav class="nav">
         <ul class="nav_list">
           <li class="nav_item"><a href="/top" class="nav_item_a"><img src="{{ asset('pictlog/img/iconhome2.png')}}" class="header_icon_img"></a></li>
-          <li class="nav_item"><a href="/{$id}" class="nav_item_a"><img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img"></a></li>
+          <li class="nav_item"><a href="/{{$id}}" class="nav_item_a"><img src="{{ asset('pictlog/img/icon_mypage.png') }}" class="header_icon_img"></a></li>
         </ul>
       </nav>
       <!--ナビバーここまで-->
@@ -48,32 +48,31 @@
         <form action="/item_add" method="post" class="post_form" enctype="multipart/form-data">
           @csrf
           <!--画像-->
-
+          <p class="post_comment">*一枚目には必ず写真を入れて下さい。</p>
           <ul class="img_list">
             <li class="img_li">
               <img id="preview1" class="test_img">
-              <input type="file" class="post_img" id="myImage1" accept="image/*" name="image" multiple>
-
+              <input type="file" class="post_img" id="myImage1" accept="image/*" name="image">
             </li>
 
             <li class="img_li">
               <img id="preview2" class="test_img">
-              <input type="file" class="post_img" id="myImage2" accept="image/*" name="image2" multiple>
+              <input type="file" class="post_img" id="myImage2" accept="image/*" name="image2">
 
             </li>
             <li class="img_li">
               <img id="preview3" class="test_img">
-              <input type="file" class="post_img" id="myImage3" accept="image/*" name="image3" multiple>
+              <input type="file" class="post_img" id="myImage3" accept="image/*" name="image3">
 
             </li>
             <li class="img_li">
               <img id="preview4" class="test_img">
-              <input type="file" class="post_img" id="myImage4" accept="image/*" name="image4" multiple>
+              <input type="file" class="post_img" id="myImage4" accept="image/*" name="image4">
 
             </li>
             <li class="img_li">
               <img id="preview5" class="test_img">
-              <input type="file" class="post_img" id="myImage5" accept="image/*" name="image5" multiple>
+              <input type="file" class="post_img" id="myImage5" accept="image/*" name="image5">
 
             </li>
 

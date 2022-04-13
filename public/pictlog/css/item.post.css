@@ -138,3 +138,10 @@
     color: #fff;
     background: #696969;
 }
+
+/*投稿注意書き*/
+.post_comment {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 12px;
+}
